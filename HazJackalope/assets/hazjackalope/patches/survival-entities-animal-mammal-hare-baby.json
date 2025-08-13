@@ -12,7 +12,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/client/shapeByType",
     "value": {
       "*-jackalope": {
@@ -26,7 +26,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/client/texturesByType",
     "value": {
       "*-jackalope": {
@@ -40,7 +40,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/variantgroups/0/states/6",
     "value": "jackalope",
     "file": "game:entities/animal/mammal/hare-baby.json",

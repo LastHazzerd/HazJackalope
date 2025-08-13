@@ -6,7 +6,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/client/texturesByType",
     "value": {
       "*-jackalope": {
@@ -20,7 +20,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/client/behaviors/6",
     "value": {
       "code": "antlergrowth",
@@ -33,7 +33,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/client/shapeByType/*-jackalope",
     "value": {
       "base": "entity/animal/mammal/hare/jackalope-{gender}"
@@ -120,7 +120,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/8",
     "value": {
       "code": "breathe"
@@ -129,7 +129,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/9",
     "value": {
       "code": "multiply",
@@ -155,7 +155,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/10",
     "value": {
       "code": "emotionstates",
@@ -182,7 +182,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/11",
     "value": {
       "code": "taskai",
@@ -345,7 +345,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/12",
     "value": {
       "code": "antlergrowth",
@@ -383,7 +383,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/spawnconditionsByType/*-jackalope-adult-male",
     "value": {
       "worldgen": {
@@ -444,7 +444,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/variantgroups/0/states/6",
     "value": "jackalope",
     "file": "game:entities/animal/mammal/hare-adult.json",
