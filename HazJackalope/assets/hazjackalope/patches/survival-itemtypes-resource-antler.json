@@ -1,0 +1,294 @@
+[
+  {
+    "op": "add",
+    "path": "/attributes/onAntlerMountTransformByType/antler-jackalopefemale-*",
+    "value": {
+      "translation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "origin": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/onAntlerMountTransformByType/antler-jackalopemale-*",
+    "value": {
+      "translation": {
+        "x": -0.01,
+        "y": 0.38,
+        "z": 0.36
+      },
+      "rotation": {
+        "x": -180,
+        "y": 0,
+        "z": -121
+      },
+      "origin": {
+        "x": 0.1,
+        "y": 0.2,
+        "z": 0.1
+      }
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/groundTransformByType/antler-jackalopefemale-*",
+    "value": {
+      "translation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "origin": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": 5
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/groundTransformByType/antler-jackalopemale-*",
+    "value": {
+      "translation": {
+        "x": 0,
+        "y": -0.39,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": -83
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6,
+        "z": 0.5
+      },
+      "scale": 5
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/guiTransformByType/antler-jackalopefemale-*",
+    "value": {
+      "translation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "origin": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": 6
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/guiTransformByType/antler-jackalopemale-*",
+    "value": {
+      "translation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 140,
+        "y": -49,
+        "z": -1
+      },
+      "origin": {
+        "x": 0.26,
+        "y": 0,
+        "z": 0.28
+      },
+      "scale": 6
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/antler-jackalopefemale-*",
+    "value": {
+      "base": "entity/animal/mammal/hare/female-antlers{size}"
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/antler-jackalopemale-*",
+    "value": {
+      "base": "entity/animal/mammal/hare/male-antlers{size}"
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/63",
+    "value": "antler-jackalopemale-05",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/64",
+    "value": "antler-jackalopemale-06",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/65",
+    "value": "antler-jackalopemale-07",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/66",
+    "value": "antler-jackalopemale-08",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/67",
+    "value": "antler-jackalopemale-09",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/68",
+    "value": "antler-jackalopefemale-05",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/69",
+    "value": "antler-jackalopefemale-06",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/70",
+    "value": "antler-jackalopefemale-07",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/71",
+    "value": "antler-jackalopefemale-08",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/skipVariants/72",
+    "value": "antler-jackalopefemale-09",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/tpHandTransformByType/antler-jackalopefemale-*",
+    "value": {
+      "translation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "origin": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": 1
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/tpHandTransformByType/antler-jackalopemale-*",
+    "value": {
+      "translation": {
+        "x": -0.93,
+        "y": -0.4,
+        "z": -1.08
+      },
+      "rotation": {
+        "x": -121,
+        "y": 154,
+        "z": 82
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.41,
+        "z": 0.5
+      },
+      "scale": 1
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/24",
+    "value": "jackalopemale",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/25",
+    "value": "jackalopefemale",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  }
+]
