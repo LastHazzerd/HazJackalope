@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "hazjackalope",
+    "name": "HazJackalope",
+    "authors": [
+        "LastHazzerd"
+    ],
+    "description": "Adds a hare varient with antlers with unique drops.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": ""
+    }
+}

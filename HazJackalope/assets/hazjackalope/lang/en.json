@@ -1,0 +1,9 @@
+{
+  "item-creature-hare-jackalope-adult-male": "Jackalope (male)",
+  "item-creature-hare-jackalope-adult-female": "Jackalope (female)",
+  "item-creature-hare-jackalope-baby-male": "Jackalope baby (male)",
+  "item-creature-hare-jackalope-baby-female": "Jackalope baby (female)",
+  "item-dead-creature-hare-jackalope-*": "Dead jackalope",
+  "creaturegroup-hare-jackalope-adult": "Adult jackalope",
+  "creaturegroup-hare-jackalope-baby": "Jackalope leveret"
+}
