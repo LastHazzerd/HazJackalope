@@ -1,6 +1,6 @@
 {
 	"editor": {
-		"collapsedPaths": "Root/body/L front leg,Root/body/abdomen,Root/body/R front leg,Root/body/neck/head/mouth",
+		"collapsedPaths": "Root/body/L front leg,Root/body/neck/head/mouth,Root/body/abdomen,Root/body/R front leg",
 		"allAngles": true,
 		"entityTextureMode": true
 	},
@@ -10,7 +10,7 @@
 		"jackalope-baby": [16,16]
 	},
 	"textures": {
-		"jackalope-baby": "hazjackalope:entity/jackalope-baby"
+		"jackalope-baby": "entity/animal/mammal/hare/jackalope-baby"
 	},
 	"elements": [
 		{

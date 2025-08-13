@@ -1,49 +1,49 @@
-[
-  {
-    "op": "remove",
-    "path": "/client/shape",
-    "file": "game:entities/animal/mammal/hare-baby.json",
-    "side": "Server"
-  },
-  {
-    "op": "remove",
-    "path": "/client/texture",
-    "file": "game:entities/animal/mammal/hare-baby.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/client/shapeByType",
-    "value": {
-      "*-jackalope": {
-        "base": "entity/animal/mammal/hare/jackalope-baby"
-      },
-      "*": {
-        "base": "entity/animal/mammal/hare/baby"
-      }
-    },
-    "file": "game:entities/animal/mammal/hare-baby.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/client/texturesByType",
-    "value": {
-      "*-jackalope": {
-        "base": "entity/animal/mammal/hare/jackalope-baby"
-      },
-      "*": {
-        "base": "entity/animal/mammal/hare/european-baby"
-      }
-    },
-    "file": "game:entities/animal/mammal/hare-baby.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/variantgroups/0/states/6",
-    "value": "jackalope",
-    "file": "game:entities/animal/mammal/hare-baby.json",
-    "side": "Server"
-  }
-]
+//[
+//  {
+//    "op": "remove",
+//    "path": "/client/shape",
+//    "file": "game:entities/animal/mammal/hare-baby.json",
+//    "side": "Server"
+//  },
+//  {
+//    "op": "remove",
+//    "path": "/client/texture",
+//    "file": "game:entities/animal/mammal/hare-baby.json",
+//    "side": "Server"
+//  },
+//  {
+//    "op": "addmerge",
+//    "path": "/client/shapeByType",
+//    "value": {
+//      "*-jackalope": {
+//        "base": "entity/animal/mammal/hare/jackalope-baby"
+//      },
+//      "*": {
+//        "base": "entity/animal/mammal/hare/baby"
+//      }
+//    },
+//    "file": "game:entities/animal/mammal/hare-baby.json",
+//    "side": "Server"
+//  },
+//  {
+//    "op": "addmerge",
+//    "path": "/client/texturesByType",
+//    "value": {
+//      "*-jackalope": {
+//        "base": "entity/animal/mammal/hare/jackalope-baby"
+//      },
+//      "*": {
+//        "base": "entity/animal/mammal/hare/european-baby"
+//      }
+//    },
+//    "file": "game:entities/animal/mammal/hare-baby.json",
+//    "side": "Server"
+//  },
+//  {
+//    "op": "addmerge",
+//    "path": "/variantgroups/0/states/6",
+//    "value": "jackalope",
+//    "file": "game:entities/animal/mammal/hare-baby.json",
+//    "side": "Server"
+//  }
+//]
