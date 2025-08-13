@@ -53,7 +53,7 @@
   "drops": [],
   "client": {
     "renderer": "Shape",
-    "shape": { "base": "entity/jackalope-baby" },
+    "shape": { "base": "entity/animal/mammal/hare/jackalope-baby" },
     "texture": { "base": "entity/animal/mammal/hare/jackalope-baby" },
     "sizeGrowthFactor": 0.2,
     "behaviors": [

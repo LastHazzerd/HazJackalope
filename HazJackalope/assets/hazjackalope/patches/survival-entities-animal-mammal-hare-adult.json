@@ -127,7 +127,7 @@
     "side": "Server"
   }, //separated the jackalope drops in case i wish to add something special to their drops later.
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/8",
     "value": {
       "code": "breathe"
@@ -136,7 +136,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/9",
     "value": {
       "code": "multiply",
@@ -162,7 +162,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/10",
     "value": {
       "code": "emotionstates",
@@ -189,7 +189,7 @@
     "side": "Server"
   },
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/11",
     "value": {
       "code": "taskai",
@@ -353,7 +353,7 @@
   },
   //The antler growth server behavior is here
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/behaviors/12",
     "value": {
       "code": "antlergrowth",
@@ -392,7 +392,7 @@
   },
   // below is the spawn conditions for the jackalopes. default is more rare than the average hare.
   {
-    "op": "add",
+    "op": "addmerge",
     "path": "/server/spawnconditionsByType/*-jackalope-adult-male",
     "value": {
       "worldgen": {
