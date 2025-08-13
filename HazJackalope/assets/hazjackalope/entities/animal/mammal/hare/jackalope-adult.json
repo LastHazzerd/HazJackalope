@@ -59,7 +59,7 @@
       "jackalope": { "base": "entity/jackalope-{gender}" }
     },
     "textures": {
-      "skin": { "base": "entity/jackalope-adult" }
+      "skin": { "base": "entity/animal/mammal/hare/jackalope-adult" }
     },
     "behaviors": [
       { "code": "repulseagents" },
