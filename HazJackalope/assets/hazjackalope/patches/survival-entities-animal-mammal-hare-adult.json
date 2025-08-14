@@ -42,6 +42,7 @@
     "file": "game:entities/animal/mammal/hare-adult.json",
     "side": "Server"
   },
+  // enables the antler growth behavior client side.
   {
     "op": "addmerge",
     "path": "/client/behaviors/6",

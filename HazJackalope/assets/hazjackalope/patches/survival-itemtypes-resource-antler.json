@@ -18,70 +18,70 @@
   {
     "op": "addmerge",
     "path": "/skipVariants/63",
-    "value": "antler-jackalopemale-05",
+    "value": "game:antler-jackalopemale-05",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/64",
-    "value": "antler-jackalopemale-06",
+    "value": "game:antler-jackalopemale-06",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/65",
-    "value": "antler-jackalopemale-07",
+    "value": "game:antler-jackalopemale-07",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/66",
-    "value": "antler-jackalopemale-08",
+    "value": "game:antler-jackalopemale-08",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/67",
-    "value": "antler-jackalopemale-09",
+    "value": "game:antler-jackalopemale-09",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/68",
-    "value": "antler-jackalopefemale-05",
+    "value": "game:antler-jackalopefemale-05",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/69",
-    "value": "antler-jackalopefemale-06",
+    "value": "game:antler-jackalopefemale-06",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/70",
-    "value": "antler-jackalopefemale-07",
+    "value": "game:antler-jackalopefemale-07",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/71",
-    "value": "antler-jackalopefemale-08",
+    "value": "game:antler-jackalopefemale-08",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
     "path": "/skipVariants/72",
-    "value": "antler-jackalopefemale-09",
+    "value": "game:antler-jackalopefemale-09",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
@@ -94,18 +94,18 @@
   },
   {
     "op": "addmerge",
-    "path": "/shapeByType/antler-jackalopefemale-*",
+    "path": "/shapeByType/antler-jackalopemale-*",
     "value": {
-      "base": "hazjackalope:entity/animal/mammal/hare/female-antlers{size}"
+      "base": "hazjackalope:entity/animal/mammal/hare/male-antlers{size}"
     },
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/shapeByType/antler-jackalopemale-*",
+    "path": "/shapeByType/antler-jackalopefemale-*",
     "value": {
-      "base": "hazjackalope:entity/animal/mammal/hare/male-antlers{size}"
+      "base": "hazjackalope:entity/animal/mammal/hare/female-antlers{size}"
     },
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
@@ -117,25 +117,24 @@
     "file": "game:itemtypes/resource/antler.json"
   },
   //attributes section
-  //Patch 18 in hazjackalope:patches/survival-itemtypes-resource-antler.json failed because it is missing the target file property
   {
     "op": "addmerge",
     "path": "/attributes/onAntlerMountTransformByType/antler-jackalopefemale-*",
     "value": {
       "translation": {
-        "x": -0.01,
-        "y": 0.38,
-        "z": 0.36
+        "x": -0.05,
+        "y": 0.45,
+        "z": 0.57
       },
       "rotation": {
         "x": -180,
         "y": 0,
-        "z": -121
+        "z": -95
       },
       "origin": {
-        "x": 0.1,
-        "y": 0.2,
-        "z": 0.1
+        "x": 0,
+        "y": 0,
+        "z": 0
       }
     },
     "file": "game:itemtypes/resource/antler.json",
@@ -146,19 +145,19 @@
     "path": "/attributes/onAntlerMountTransformByType/antler-jackalopemale-*",
     "value": {
       "translation": {
-        "x": -0.01,
-        "y": 0.38,
-        "z": 0.36
+        "x": -0.05,
+        "y": 0.45,
+        "z": 0.57
       },
       "rotation": {
         "x": -180,
         "y": 0,
-        "z": -121
+        "z": -95
       },
       "origin": {
-        "x": 0.1,
-        "y": 0.2,
-        "z": 0.1
+        "x": 0,
+        "y": 0,
+        "z": 0
       }
     },
     "file": "game:itemtypes/resource/antler.json",
@@ -267,18 +266,18 @@
     "value": {
       "translation": {
         "x": 0,
-        "y": -0.39,
+        "y": 0,
         "z": 0
       },
       "rotation": {
         "x": 0,
         "y": 0,
-        "z": -83
+        "z": 0
       },
       "origin": {
-        "x": 0.5,
-        "y": 0.6,
-        "z": 0.5
+        "x": 0,
+        "y": 0,
+        "z": 0
       },
       "scale": 5
     },
@@ -291,18 +290,18 @@
     "value": {
       "translation": {
         "x": 0,
-        "y": -0.39,
+        "y": 0,
         "z": 0
       },
       "rotation": {
         "x": 0,
         "y": 0,
-        "z": -83
+        "z": 0
       },
       "origin": {
-        "x": 0.5,
-        "y": 0.6,
-        "z": 0.5
+        "x": 0,
+        "y": 0,
+        "z": 0
       },
       "scale": 5
     },
