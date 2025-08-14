@@ -362,6 +362,10 @@
         "*-jackalope-adult-*": true,
         "*": false
       },
+      "overrideTypeByType": {
+        "*-jackalope-adult-male": "jackalopemale",
+        "*-jackalope-adult-female": "jackalopefemale"
+      },
       "variantsByType": {
         "hare-jackalope-adult-male": [
           "01",

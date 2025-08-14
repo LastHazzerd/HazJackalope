@@ -90,7 +90,8 @@
     "op": "move",
     "frompath": "/shapeByType/*",
     "path": "/temp",
-    "file": "game:itemtypes/resource/antler.json"
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"//see if this can remove the client debug warning
   },
   {
     "op": "addmerge",
@@ -114,7 +115,8 @@
     "op": "move",
     "frompath": "/temp",
     "path": "/shapeByType/*",
-    "file": "game:itemtypes/resource/antler.json"
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server" //see if this can remove the client debug warning
   },
   //attributes section
   {

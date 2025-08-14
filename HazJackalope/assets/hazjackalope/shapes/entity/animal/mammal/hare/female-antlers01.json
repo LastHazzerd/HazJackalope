@@ -15,9 +15,10 @@
 	"elements": [
 		{
 			"name": "Horn Root",
-			"from": [ 0.0, 1.0, 0.5 ],
-			"to": [ 0.0, 1.0, 0.5 ],
-			"rotationOrigin": [ 0.0, 1.0, 0.5 ],
+			"stepParentName": "head",
+			"from": [ 0.7, 1.8, 1.5 ],
+			"to": [ 0.7, 1.8, 1.5 ],
+			"rotationOrigin": [ 1.0, 1.5, 1.5 ],
 			"faces": {
 				"north": { "texture": "#skin", "uv": [ 16.0, 18.5, 16.5, 19.0 ] },
 				"east": { "texture": "#skin", "uv": [ 16.5, 18.5, 17.0, 19.0 ] },
@@ -29,9 +30,9 @@
 			"children": [
 				{
 					"name": "L antler hub",
-					"from": [ 0.1, 1.5, 1.0 ],
-					"to": [ 0.6, 2.0, 1.5 ],
-					"rotationOrigin": [ 0.1, 1.5, 0.8 ],
+					"from": [ 0.0, 1.0, 0.5 ],
+					"to": [ 0.5, 1.5, 1.0 ],
+					"rotationOrigin": [ 0.25, 1.25, 0.75 ],
 					"rotationX": 14.0,
 					"rotationZ": 5.0,
 					"faces": {
@@ -64,9 +65,9 @@
 				},
 				{
 					"name": "R antler hub",
-					"from": [ 0.1, 1.5, -0.6 ],
-					"to": [ 0.6, 2.0, -0.1 ],
-					"rotationOrigin": [ 0.1, 1.5, 0.4 ],
+					"from": [ 0.0, 1.0, -1.0 ],
+					"to": [ 0.5, 1.5, -0.5 ],
+					"rotationOrigin": [ 0.25, 1.25, -0.75 ],
 					"rotationX": -14.0,
 					"rotationZ": 5.0,
 					"faces": {
