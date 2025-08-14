@@ -1,16 +1,30 @@
 [
   //add the varient jackalope and its textures to the game
+  // for 1.20, animal entity jsons are separated by their gender, so for 1.20 this patch needs to include two different "file" adds
   {
     "op": "addmerge",
-    "path": "/variantgroups/0/states/6",
+    "path": "/variantgroups/0/states/9",
     "value": "jackalope",
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/variantgroups/0/states/9",
+    "value": "jackalope",
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   {
     "op": "remove",
     "path": "/client/textures",
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
+    "side": "Server"
+  },
+  {
+    "op": "remove",
+    "path": "/client/textures",
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   {
@@ -21,10 +35,24 @@
         "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
       },
       "*": {
-        "skin": { "base": "game:entity/animal/mammal/hare/{type}-{gender}*" }
+        "skin": { "base": "entity/hare/female-{type}" }
       }
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/client/texturesByType",
+    "value": {
+      "*-jackalope-*": {
+        "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
+      },
+      "*": {
+        "skin": { "base": "entity/hare/male-{type}" }
+      }
+    },
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   // client
@@ -38,7 +66,20 @@
         "*": false
       }
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/client/behaviors/6",
+    "value": {
+      "code": "antlergrowth",
+      "enabledByType": {
+        "*-jackalope-adult-*": true,
+        "*": false
+      }
+    },
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   {
@@ -50,33 +91,21 @@
       "animationSpeed": 2.2,
       "weight": 10,
       "blendMode": "AddAverage"
-    },  
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    },
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   // server
-  {
+  { //there were four copies of this, might need them, idk, but for now i'm bringing it down to 1 per animal gender.
     "op": "remove",
     "path": "/server/behaviors/7",
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
     "side": "Server"
   },
   {
     "op": "remove",
     "path": "/server/behaviors/7",
-    "file": "game:entities/animal/mammal/hare-adult.json",
-    "side": "Server"
-  },
-  {
-    "op": "remove",
-    "path": "/server/behaviors/7",
-    "file": "game:entities/animal/mammal/hare-adult.json",
-    "side": "Server"
-  },
-  {
-    "op": "remove",
-    "path": "/server/behaviors/7",
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   {
@@ -123,7 +152,54 @@
         ]
       }
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
+    "side": "Server"
+  },
+  {
+    "op": "replace",
+    "path": "/server/behaviors/7",
+    "value": {
+      "code": "harvestable",
+      "dropsByType": {
+        "*-Jackalope": [
+          {
+            "type": "item",
+            "code": "redmeat-raw",
+            "quantity": {
+              "avg": 2,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "hide-raw-small",
+            "quantity": {
+              "avg": 1,
+              "var": 0
+            }
+          }
+        ],
+        "*": [
+          {
+            "type": "item",
+            "code": "redmeat-raw",
+            "quantity": {
+              "avg": 2,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "hide-raw-small",
+            "quantity": {
+              "avg": 0.5,
+              "var": 0
+            }
+          }
+        ]
+      }
+    },
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   //separated the jackalope drops in case i wish to add something special to their drops later.
@@ -133,7 +209,16 @@
     "value": {
       "code": "breathe"
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/server/behaviors/8",
+    "value": {
+      "code": "breathe"
+    },
+    "file": "game:entities/land/hare-male.json",
     "side": "Server"
   },
   {
@@ -159,7 +244,7 @@
       "multiplyCooldownDaysMax": 5,
       "portionsEatenForMultiply": 2
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
     "side": "Server"
   },
   {
@@ -200,7 +285,7 @@
         }
       ]
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
     "side": "Server"
   },
   {
@@ -386,7 +471,7 @@
         }
       ]
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
     "side": "Server"
   },
   //The antler growth server behavior is here
@@ -429,7 +514,7 @@
         "*": false
       }
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
     "side": "Server"
   },
   // below is the spawn conditions for the jackalopes. default is more rare than the average hare.
@@ -491,7 +576,7 @@
         "maxShrubs": 0.9
       }
     },
-    "file": "game:entities/animal/mammal/hare-adult.json",
+    "file": "game:entities/land/hare-female.json",
     "side": "Server"
   }
 ]
