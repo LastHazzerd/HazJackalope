@@ -3,7 +3,7 @@
     "op": "addmerge",
     "path": "/shapeByType/creature-hare-jackalope-adult-female",
     "value": {
-      "base": "entity/animal/mammal/hare/jackalope-female"
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-female"
     },
     "file": "game:itemtypes/creature.json",
     "side": "Server"
@@ -12,7 +12,7 @@
     "op": "addmerge",
     "path": "/shapeByType/creature-hare-jackalope-adult-male",
     "value": {
-      "base": "entity/animal/mammal/hare/jackalope-male"
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-male"
     },
     "file": "game:itemtypes/creature.json",
     "side": "Server"
@@ -21,7 +21,7 @@
     "op": "addmerge",
     "path": "/shapeByType/creature-hare-jackalope-baby-female",
     "value": {
-      "base": "entity/animal/mammal/hare/jackalope-baby"
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
     },
     "file": "game:itemtypes/creature.json",
     "side": "Server"
@@ -30,7 +30,7 @@
     "op": "addmerge",
     "path": "/shapeByType/creature-hare-jackalope-baby-male",
     "value": {
-      "base": "entity/animal/mammal/hare/jackalope-baby"
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
     },
     "file": "game:itemtypes/creature.json",
     "side": "Server"
@@ -47,7 +47,7 @@
     "path": "/texturesByType/*-hare-jackalope-adult-female",
     "value": {
       "skin": {
-        "base": "entity/animal/mammal/hare/jackalope-adult"
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
       }
     },
     "file": "game:itemtypes/creature.json",
@@ -58,7 +58,7 @@
     "path": "/texturesByType/*-hare-jackalope-adult-male",
     "value": {
       "skin": {
-        "base": "entity/animal/mammal/hare/jackalope-adult"
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
       }
     },
     "file": "game:itemtypes/creature.json",
@@ -69,7 +69,7 @@
     "path": "/texturesByType/creature-hare-jackalope-baby-female",
     "value": {
       "skin": {
-        "base": "entity/animal/mammal/hare/jackalope-baby"
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
       }
     },
     "file": "game:itemtypes/creature.json",
@@ -80,7 +80,7 @@
     "path": "/texturesByType/creature-hare-jackalope-baby-male",
     "value": {
       "skin": {
-        "base": "entity/animal/mammal/hare/jackalope-baby"
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
       }
     },
     "file": "game:itemtypes/creature.json",

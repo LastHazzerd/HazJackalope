@@ -7,22 +7,6 @@
     "side": "Server"
   },
   {
-    "op": "addmerge",
-    "path": "/client/shapeByType/*-jackalope",
-    "value": {
-      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-{gender}"
-    },
-    "file": "game:entities/animal/mammal/hare-adult.json",
-    "side": "Server"
-  },
-  {
-    "op": "replace",
-    "path": "/client/shapeByType/*/base",
-    "value": "entity/animal/mammal/hare/european-{gender}",
-    "file": "game:entities/animal/mammal/hare-adult.json",
-    "side": "Server"
-  },
-  {
     "op": "remove",
     "path": "/client/textures",
     "file": "game:entities/animal/mammal/hare-adult.json",
@@ -32,11 +16,11 @@
     "op": "addmerge",
     "path": "/client/texturesByType",
     "value": {
-      "*-jackalope": {
+      "*-jackalope-*": {
         "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
       },
       "*": {
-        "skin": { "base": "entity/animal/mammal/hare/{type}-{gender}*" }
+        "skin": { "base": "game:entity/animal/mammal/hare/{type}-{gender}*" }
       }
     },
     "file": "game:entities/animal/mammal/hare-adult.json",

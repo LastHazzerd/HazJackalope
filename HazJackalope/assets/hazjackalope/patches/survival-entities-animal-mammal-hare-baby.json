@@ -12,16 +12,12 @@
     "file": "game:entities/animal/mammal/hare-baby.json",
     "side": "Server"
   },
-  {
+  {//find out why the baby model/texture isn't taking
     "op": "addmerge",
     "path": "/client/shapeByType",
     "value": {
-      "*-jackalope": {
-        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
-      },
-      "*": {
-        "base": "game:entity/animal/mammal/hare/baby"
-      }
+      "*-jackalope-*": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" },
+      "*": { "base": "game:entity/animal/mammal/hare/baby" }
     },
     "file": "game:entities/animal/mammal/hare-baby.json",
     "side": "Server"
@@ -36,7 +32,7 @@
     "op": "addmerge",
     "path": "/client/textureByType",
     "value": {      
-        "*-jackalope": {
+        "*-jackalope-*": {
           "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
         },
         "*": {

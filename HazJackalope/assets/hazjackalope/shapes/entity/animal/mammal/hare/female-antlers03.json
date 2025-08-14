@@ -1,9 +1,8 @@
 {
 	"editor": {
 		"backDropShape": "animal/mammal/hare/jackalope-female",
-		"collapsedPaths": "Root/Horn Root/R antler hub,Root/Horn Root/L antler hub",
 		"allAngles": false,
-		"entityTextureMode": false
+		"entityTextureMode": true
 	},
 	"textureWidth": 32,
 	"textureHeight": 32,
@@ -11,7 +10,7 @@
 		"skin": [32,32]
 	},
 	"textures": {
-		"skin": "entity/animal/mammal/hare/jackalope-adult"
+		"skin": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
 	},
 	"elements": [
 		{
@@ -19,6 +18,7 @@
 			"stepParentName": "head",
 			"from": [ 0.7, 1.8, 1.5 ],
 			"to": [ 0.7, 1.8, 1.5 ],
+			"uv": [ 16.0, 18.0 ],
 			"rotationOrigin": [ 1.0, 1.5, 1.5 ],
 			"faces": {
 				"north": { "texture": "#skin", "uv": [ 16.0, 18.5, 16.5, 19.0 ] },
@@ -33,6 +33,7 @@
 					"name": "L antler hub",
 					"from": [ 0.0, 0.8, 0.5 ],
 					"to": [ 0.8, 1.7, 1.3 ],
+					"uv": [ 16.0, 18.0 ],
 					"rotationOrigin": [ 0.35, 1.2, 0.85 ],
 					"rotationX": 14.0,
 					"rotationZ": 5.0,
@@ -49,6 +50,7 @@
 							"name": "Lbeam1",
 							"from": [ 0.1, 0.7, 0.1 ],
 							"to": [ 0.7, 2.2, 0.7 ],
+							"uv": [ 16.0, 16.0 ],
 							"rotationOrigin": [ 0.4, 0.85, 0.4 ],
 							"rotationX": -3.0,
 							"rotationY": 3.0,
@@ -66,23 +68,25 @@
 									"name": "Lbeam2",
 									"from": [ 0.05, 1.2, 0.05 ],
 									"to": [ 0.55, 2.3, 0.55 ],
+									"uv": [ 16.0, 14.5 ],
 									"rotationOrigin": [ 0.3, 1.3, 0.3 ],
 									"rotationX": 8.0,
 									"rotationY": -6.0,
 									"rotationZ": -25.0,
 									"faces": {
-										"north": { "texture": "#skin", "uv": [ 16.0, 14.5, 16.5, 15.5 ] },
-										"east": { "texture": "#skin", "uv": [ 16.5, 14.5, 17.0, 15.5 ] },
-										"south": { "texture": "#skin", "uv": [ 17.0, 14.5, 17.5, 15.5 ] },
-										"west": { "texture": "#skin", "uv": [ 17.5, 14.5, 18.0, 15.5 ] },
-										"up": { "texture": "#skin", "uv": [ 16.0, 14.0, 16.5, 14.5 ] },
-										"down": { "texture": "#skin", "uv": [ 16.5, 14.0, 17.0, 14.5 ] }
+										"north": { "texture": "#skin", "uv": [ 16.0, 15.0, 16.5, 16.0 ] },
+										"east": { "texture": "#skin", "uv": [ 16.5, 15.0, 17.0, 16.0 ] },
+										"south": { "texture": "#skin", "uv": [ 17.0, 15.0, 17.5, 16.0 ] },
+										"west": { "texture": "#skin", "uv": [ 17.5, 15.0, 18.0, 16.0 ] },
+										"up": { "texture": "#skin", "uv": [ 16.0, 14.5, 16.5, 15.0 ] },
+										"down": { "texture": "#skin", "uv": [ 16.5, 14.5, 17.0, 15.0 ] }
 									},
 									"children": [
 										{
 											"name": "Lbeam3",
 											"from": [ 0.1, 0.8, 0.05 ],
 											"to": [ 0.5, 1.3, 0.45 ],
+											"uv": [ 13.0, 18.0 ],
 											"rotationOrigin": [ 0.3, 1.0, 0.25 ],
 											"rotationX": 11.0,
 											"rotationY": -14.0,
@@ -100,6 +104,7 @@
 											"name": "Lbeam5",
 											"from": [ 0.0, 0.5963, 0.1 ],
 											"to": [ 0.3, 0.9963, 0.4 ],
+											"uv": [ 13.0, 18.0 ],
 											"rotationOrigin": [ 0.15, 0.5963, 0.25 ],
 											"rotationX": -14.0,
 											"rotationY": -28.0,
@@ -121,6 +126,7 @@
 							"name": "Lbeam7",
 							"from": [ 0.1, 0.7, 0.5 ],
 							"to": [ 0.5, 1.2, 0.9 ],
+							"uv": [ 16.0, 16.0 ],
 							"rotationOrigin": [ 0.3, 0.85, 0.7 ],
 							"rotationX": 42.0,
 							"rotationY": 19.0,
@@ -140,6 +146,7 @@
 					"name": "R antler hub",
 					"from": [ 0.0, 0.8, -1.2 ],
 					"to": [ 0.8, 1.7, -0.4 ],
+					"uv": [ 16.0, 18.0 ],
 					"rotationOrigin": [ 0.35, 1.2, -0.85 ],
 					"rotationX": -14.0,
 					"rotationZ": 5.0,
@@ -156,6 +163,7 @@
 							"name": "Rbeam1",
 							"from": [ 0.1, 0.7, 0.1 ],
 							"to": [ 0.7, 2.2, 0.7 ],
+							"uv": [ 16.0, 16.0 ],
 							"rotationOrigin": [ 0.4, 0.85, 0.4 ],
 							"rotationX": 3.0,
 							"rotationY": -3.0,
@@ -173,23 +181,25 @@
 									"name": "Rbeam2",
 									"from": [ 0.05, 1.2, 0.05 ],
 									"to": [ 0.55, 2.2, 0.55 ],
+									"uv": [ 16.0, 14.5 ],
 									"rotationOrigin": [ 0.3, 1.3, 0.3 ],
 									"rotationX": -8.0,
 									"rotationY": 6.0,
 									"rotationZ": -25.0,
 									"faces": {
-										"north": { "texture": "#skin", "uv": [ 16.0, 14.5, 16.5, 15.5 ] },
-										"east": { "texture": "#skin", "uv": [ 16.5, 14.5, 17.0, 15.5 ] },
-										"south": { "texture": "#skin", "uv": [ 17.0, 14.5, 17.5, 15.5 ] },
-										"west": { "texture": "#skin", "uv": [ 17.5, 14.5, 18.0, 15.5 ] },
-										"up": { "texture": "#skin", "uv": [ 16.0, 14.0, 16.5, 14.5 ] },
-										"down": { "texture": "#skin", "uv": [ 16.5, 14.0, 17.0, 14.5 ] }
+										"north": { "texture": "#skin", "uv": [ 16.0, 15.0, 16.5, 16.0 ] },
+										"east": { "texture": "#skin", "uv": [ 16.5, 15.0, 17.0, 16.0 ] },
+										"south": { "texture": "#skin", "uv": [ 17.0, 15.0, 17.5, 16.0 ] },
+										"west": { "texture": "#skin", "uv": [ 17.5, 15.0, 18.0, 16.0 ] },
+										"up": { "texture": "#skin", "uv": [ 16.0, 14.5, 16.5, 15.0 ] },
+										"down": { "texture": "#skin", "uv": [ 16.5, 14.5, 17.0, 15.0 ] }
 									},
 									"children": [
 										{
 											"name": "Rbeam3",
 											"from": [ 0.1, 0.8, 0.05 ],
 											"to": [ 0.5, 1.3, 0.45 ],
+											"uv": [ 13.0, 18.0 ],
 											"rotationOrigin": [ 0.3, 1.0, 0.25 ],
 											"rotationX": -11.0,
 											"rotationY": 14.0,
@@ -207,6 +217,7 @@
 											"name": "Rbeam5",
 											"from": [ 0.0, 0.5963, 0.1 ],
 											"to": [ 0.3, 0.9963, 0.4 ],
+											"uv": [ 13.0, 18.0 ],
 											"rotationOrigin": [ 0.15, 0.5963, 0.25 ],
 											"rotationX": 14.0,
 											"rotationY": 28.0,
@@ -228,6 +239,7 @@
 							"name": "Rbeam7",
 							"from": [ 0.1, 0.7, 0.0 ],
 							"to": [ 0.5, 1.2, 0.4 ],
+							"uv": [ 16.0, 16.0 ],
 							"rotationOrigin": [ 0.3, 0.85, 0.2 ],
 							"rotationX": -42.0,
 							"rotationY": -19.0,

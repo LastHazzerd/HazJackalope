@@ -10,7 +10,7 @@
     "skin": [ 32, 32 ]
   },
   "textures": {
-    "skin": "entity/animal/mammal/hare/jackalope-adult"
+    "skin": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
   },
   "elements": [
     {

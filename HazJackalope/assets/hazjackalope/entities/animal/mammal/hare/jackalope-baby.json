@@ -53,8 +53,8 @@
   "drops": [],
   "client": {
     "renderer": "Shape",
-    "shape": { "base": "entity/animal/mammal/hare/jackalope-baby" },
-    "texture": { "base": "entity/animal/mammal/hare/jackalope-baby" },
+    "shape": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" },
+    "texture": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" },
     "sizeGrowthFactor": 0.2,
     "behaviors": [
       { "code": "repulseagents" },

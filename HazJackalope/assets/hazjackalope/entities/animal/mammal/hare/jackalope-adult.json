@@ -56,10 +56,10 @@
   "client": {
     "renderer": "Shape",
     "shapeByType": {
-      "jackalope": { "base": "entity/jackalope-{gender}" }
+      "jackalope": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
     },
     "textures": {
-      "skin": { "base": "entity/animal/mammal/hare/jackalope-adult" }
+      "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
     },
     "behaviors": [
       { "code": "repulseagents" },

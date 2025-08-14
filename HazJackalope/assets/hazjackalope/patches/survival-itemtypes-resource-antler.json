@@ -91,7 +91,7 @@
     "frompath": "/shapeByType/*",
     "path": "/temp",
     "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"//see if this can remove the client debug warning
+    "side": "Server" //see if this can remove the client debug warning
   },
   {
     "op": "addmerge",
@@ -120,13 +120,20 @@
   },
   //attributes section
   {
+    "op": "move",
+    "frompath": "/attributes/onAntlerMountTransformByType/*",
+    "path": "/temp",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server" //see if this can remove the client debug warning
+  },
+  {
     "op": "addmerge",
     "path": "/attributes/onAntlerMountTransformByType/antler-jackalopefemale-*",
     "value": {
       "translation": {
         "x": -0.05,
-        "y": 0.45,
-        "z": 0.57
+        "y": 0.46,
+        "z": 0.597
       },
       "rotation": {
         "x": -180,
@@ -147,9 +154,9 @@
     "path": "/attributes/onAntlerMountTransformByType/antler-jackalopemale-*",
     "value": {
       "translation": {
-        "x": -0.05,
-        "y": 0.45,
-        "z": 0.57
+        "x": -0.075,
+        "y": 0.46,
+        "z": 0.592
       },
       "rotation": {
         "x": -180,
@@ -164,6 +171,13 @@
     },
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
+  },
+  {
+    "op": "move",
+    "frompath": "/temp",
+    "path": "/attributes/onAntlerMountTransformByType/*",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server" //see if this can remove the client debug warning
   },
   //transformations
   {
