@@ -1,4 +1,5 @@
 [
+  //add the varient jackalope and its textures to the game
   {
     "op": "addmerge",
     "path": "/variantgroups/0/states/6",
@@ -26,7 +27,7 @@
     "file": "game:entities/animal/mammal/hare-adult.json",
     "side": "Server"
   },
-  // enables the antler growth behavior client side.
+  // client
   {
     "op": "addmerge",
     "path": "/client/behaviors/6",
@@ -40,6 +41,20 @@
     "file": "game:entities/animal/mammal/hare-adult.json",
     "side": "Server"
   },
+  {
+    "op": "addmerge",
+    "path": "/client/animations/7", //might need a number at the end of this to indicate where in the animations code it goes.
+    "value": {
+      "code": "attackantlers",
+      "animation": "Attack Antlers",
+      "animationSpeed": 2.2,
+      "weight": 10,
+      "blendMode": "AddAverage"
+    },  
+    "file": "game:entities/animal/mammal/hare-adult.json",
+    "side": "Server"
+  },
+  // server
   {
     "op": "remove",
     "path": "/server/behaviors/7",
@@ -110,7 +125,8 @@
     },
     "file": "game:entities/animal/mammal/hare-adult.json",
     "side": "Server"
-  }, //separated the jackalope drops in case i wish to add something special to their drops later.
+  },
+  //separated the jackalope drops in case i wish to add something special to their drops later.
   {
     "op": "addmerge",
     "path": "/server/behaviors/8",
@@ -153,9 +169,23 @@
       "code": "emotionstates",
       "states": [
         {
+          "code": "aggressiveondamage",
+          "duration": 30,
+          "chanceByType": {
+            "*-jackalope-*": 0.5,
+            "*": 0.0
+          },
+          "slot": 0,
+          "priority": 2,
+          "accumType": "noaccum"
+        },
+        {
           "code": "fleeondamage",
           "duration": 10,
-          "chance": 1,
+          "chanceByType": {
+            "*-jackalope-*": 0.85,
+            "*": 1.0
+          },
           "slot": 0,
           "priority": 1,
           "accumType": "max"
@@ -180,6 +210,29 @@
       "code": "taskai",
       "aiCreatureType": "LandCreature",
       "aitasks": [
+        {
+          "code": "meleeattack",
+          "animation": "Attack Antlers",
+          "enabledByType": {
+            "*-jackalope-*": true,
+            "*": false
+          },
+          "entityCodes": [ "player", "wolf-*", "bear-*", "hyena-*", "fox-*" ],
+          "priority": 3,
+          "damageByType": {
+            "*": 1
+          },
+          "damageTier": 2,
+          "damageType": "SlashingAttack",
+          "slot": 1,
+          "mincooldown": 1500,
+          "maxcooldown": 2500,
+          "attackDurationMs": 1250,
+          "damagePlayerAtMs": 500,
+          "animationSpeed": 2.5,
+          "sound": "game:creature/hare-hurt",
+          "whenInEmotionState": "aggressiveondamage"
+        },
         {
           "code": "fleeentity",
           "entityCodes": [
@@ -386,7 +439,7 @@
     "value": {
       "worldgen": {
         "TriesPerChunk": {
-          "avg": 0.1,//default hare is ave 0.14
+          "avg": 0.1, //default hare is ave 0.14
           "var": 0
         },
         "tryOnlySurface": true,
@@ -408,7 +461,7 @@
       "runtime": {
         "group": "neutral",
         "tryOnlySurface": true,
-        "chance": 0.005,//default hare is chance 0.007
+        "chance": 0.005, //default hare is chance 0.007
         "maxQuantity": 3,
         "__comment": "Make them spawn away from artifical light so they don't spawn inside farmland",
         "maxLightLevel": 6,
