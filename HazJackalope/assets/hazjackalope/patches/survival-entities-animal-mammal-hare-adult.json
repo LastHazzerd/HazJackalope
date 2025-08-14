@@ -364,13 +364,13 @@
           "04"
         ]
       },
-      "beginGrowMonth": 7,
+      "beginGrowMonth": 3,
       "c1": "Amount of months until full growth. Must be less than 12 months (including grown and shed duration)",
-      "growDurationMonths": 6.5,
+      "growDurationMonths": 3,
       "c2": "Amount of months the antler can be at full growth until shedding",
-      "grownDurationMonths": 2,
+      "grownDurationMonths": 9,
       "c3": "Amount of months the antler can shed. Higher values allows players to find them for longer. A value of 0 will make antlers never drop",
-      "shedDurationMonths": 0.5,
+      "shedDurationMonths": 1,
       "noItemDropByType": {
         "hare-jackalope-adult-*": true,
         "*": false
@@ -386,7 +386,7 @@
     "value": {
       "worldgen": {
         "TriesPerChunk": {
-          "avg": 0.08,
+          "avg": 0.1,//default hare is ave 0.14
           "var": 0
         },
         "tryOnlySurface": true,
@@ -408,7 +408,7 @@
       "runtime": {
         "group": "neutral",
         "tryOnlySurface": true,
-        "chance": 0.006,
+        "chance": 0.005,//default hare is chance 0.007
         "maxQuantity": 3,
         "__comment": "Make them spawn away from artifical light so they don't spawn inside farmland",
         "maxLightLevel": 6,
@@ -428,7 +428,7 @@
           "hare-{type}-baby-female"
         ]
       },
-      "climate": {
+      "climate": { //wider range than most hares to ensure they have a chance of being seen in a few climates.
         "minTemp": -15,
         "maxTemp": 25,
         "minRain": 0.25,
