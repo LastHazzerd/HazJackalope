@@ -1,0 +1,117 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/shapeByType/creature-hare-jackalope-adult-female",
+    "value": {
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-female"
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/shapeByType/creature-hare-jackalope-adult-male",
+    "value": {
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-male"
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/shapeByType/creature-hare-jackalope-baby-female",
+    "value": {
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/shapeByType/creature-hare-jackalope-baby-male",
+    "value": {
+      "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "replace",
+    "path": "/shapeByType/creature-hare-*-adult-female/base",
+    "value": "entity/animal/mammal/hare/european-female",
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType/*-hare-jackalope-adult-female",
+    "value": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
+      }
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType/*-hare-jackalope-adult-male",
+    "value": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
+      }
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType/creature-hare-jackalope-baby-female",
+    "value": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
+      }
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType/creature-hare-jackalope-baby-male",
+    "value": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
+      }
+    },
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/variantgroups/0/states/47",
+    "value": "hare-jackalope-adult-male",
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/variantgroups/0/states/48",
+    "value": "hare-jackalope-adult-female",
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/variantgroups/0/states/49",
+    "value": "hare-jackalope-baby-male",
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/variantgroups/0/states/50",
+    "value": "hare-jackalope-baby-female",
+    "file": "game:itemtypes/creature.json",
+    "side": "Server"
+  }
+]

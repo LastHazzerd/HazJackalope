@@ -139,11 +139,11 @@
         "blendMode": "Average"
       },
       {
-        "code": "attack",
-        "animation": "attack",
-        "animationSpeed": 1,
-        "blendMode": "Average",
-        "weight": 100
+        "code": "attackantlers",
+        "animation": "Attack Antlers",
+        "animationSpeed": 2.2,
+        "weight": 10,
+        "blendMode": "AddAverage"
       }
     ]
   },

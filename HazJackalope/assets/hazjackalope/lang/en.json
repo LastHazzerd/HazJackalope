@@ -13,5 +13,9 @@
   "game:item-antler-jackalopemale-03": "Antlers (Male Jackalope)",
   "game:item-antler-jackalopefemale-03": "Antlers (Female Jackalope)",
   "game:item-antler-jackalopemale-04": "Antlers (Male Jackalope)",
-  "game:item-antler-jackalopefemale-04": "Antlers (Female Jackalope)"
+  "game:item-antler-jackalopefemale-04": "Antlers (Female Jackalope)",
+  //1.20 names
+  "game:item-creature-hare-male-jackalope": "Jackalope (male)",
+  "game:item-creature-hare-female-jackalope": "Jackalope (female)",
+  "game:item-dead-creature-hare-jackalope": "Jackalope (dead)"
 }

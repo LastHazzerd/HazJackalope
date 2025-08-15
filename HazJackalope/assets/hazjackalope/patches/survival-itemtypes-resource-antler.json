@@ -1,131 +1,4 @@
 [
-  //adding the variants for jackalopes
-  {
-    "op": "addmerge",
-    "path": "/variantgroups/0/states/24",
-    "value": "jackalopemale",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/variantgroups/0/states/25",
-    "value": "jackalopefemale",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  //skipping the varient antler stages that don't exist for the jackalopes
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/63",
-    "value": "game:antler-jackalopemale-05",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/64",
-    "value": "game:antler-jackalopemale-06",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/65",
-    "value": "game:antler-jackalopemale-07",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/66",
-    "value": "game:antler-jackalopemale-08",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/67",
-    "value": "game:antler-jackalopemale-09",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/68",
-    "value": "game:antler-jackalopefemale-05",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/69",
-    "value": "game:antler-jackalopefemale-06",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/70",
-    "value": "game:antler-jackalopefemale-07",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/71",
-    "value": "game:antler-jackalopefemale-08",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/skipVariants/72",
-    "value": "game:antler-jackalopefemale-09",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  //need to move the wildcard at the end of shapeByType
-  {
-    "op": "move",
-    "frompath": "/shapeByType/*",
-    "path": "/temp",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server" //see if this can remove the client debug warning
-  },
-  {
-    "op": "addmerge",
-    "path": "/shapeByType/antler-jackalopemale-*",
-    "value": {
-      "base": "hazjackalope:entity/animal/mammal/hare/male-antlers{size}"
-    },
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "addmerge",
-    "path": "/shapeByType/antler-jackalopefemale-*",
-    "value": {
-      "base": "hazjackalope:entity/animal/mammal/hare/female-antlers{size}"
-    },
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server"
-  },
-  {
-    "op": "move",
-    "frompath": "/temp",
-    "path": "/shapeByType/*",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server" //see if this can remove the client debug warning
-  },
-  //attributes section
-  {
-    "op": "move",
-    "frompath": "/attributes/onAntlerMountTransformByType/*",
-    "path": "/temp",
-    "file": "game:itemtypes/resource/antler.json",
-    "side": "Server" //see if this can remove the client debug warning
-  },
   {
     "op": "addmerge",
     "path": "/attributes/onAntlerMountTransformByType/antler-jackalopefemale-*",
@@ -154,9 +27,9 @@
     "path": "/attributes/onAntlerMountTransformByType/antler-jackalopemale-*",
     "value": {
       "translation": {
-        "x": -0.075,
+        "x": -0.05,
         "y": 0.46,
-        "z": 0.592
+        "z": 0.597
       },
       "rotation": {
         "x": -180,
@@ -173,13 +46,59 @@
     "side": "Server"
   },
   {
-    "op": "move",
-    "frompath": "/temp",
-    "path": "/attributes/onAntlerMountTransformByType/*",
+    "op": "addmerge",
+    "path": "/groundTransformByType/antler-jackalopefemale-*",
+    "value": {
+      "translation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 5
+    },
     "file": "game:itemtypes/resource/antler.json",
-    "side": "Server" //see if this can remove the client debug warning
+    "side": "Server"
   },
-  //transformations
+  {
+    "op": "addmerge",
+    "path": "/groundTransformByType/antler-jackalopemale-*",
+    "value": {
+      "translation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 5
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "remove",
+    "path": "/guiTransformByType/antler-valais-*",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
   {
     "op": "addmerge",
     "path": "/guiTransformByType/antler-jackalopefemale-*",
@@ -225,6 +144,108 @@
       },
       "scale": 6
     },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "move",
+    "frompath": "/shapeByType/*",
+    "path": "/temp",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server" //see if this can remove the client debug warning
+  },
+  {
+    "op": "addmerge",
+    "path": "/shapeByType/antler-jackalopefemale-*",
+    "value": {
+      "base": "hazjackalope:entity/animal/mammal/hare/female-antlers{size}"
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/shapeByType/antler-jackalopemale-*",
+    "value": {
+      "base": "hazjackalope:entity/animal/mammal/hare/male-antlers{size}"
+    },
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "move",
+    "frompath": "/temp",
+    "path": "/shapeByType/*",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server" //see if this can remove the client debug warning
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/63",
+    "value": "antler-jackalopemale-05",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/64",
+    "value": "antler-jackalopemale-06",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/65",
+    "value": "antler-jackalopemale-07",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/66",
+    "value": "antler-jackalopemale-08",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/67",
+    "value": "antler-jackalopemale-09",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/68",
+    "value": "antler-jackalopefemale-05",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/69",
+    "value": "antler-jackalopefemale-06",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/70",
+    "value": "antler-jackalopefemale-07",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/71",
+    "value": "antler-jackalopefemale-08",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/skipVariants/72",
+    "value": "antler-jackalopefemale-09",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
@@ -278,49 +299,15 @@
   },
   {
     "op": "addmerge",
-    "path": "/groundTransformByType/antler-jackalopefemale-*",
-    "value": {
-      "translation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "origin": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "scale": 5
-    },
+    "path": "/variantgroups/0/states/24",
+    "value": "jackalopemale",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/groundTransformByType/antler-jackalopemale-*",
-    "value": {
-      "translation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "origin": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "scale": 5
-    },
+    "path": "/variantgroups/0/states/25",
+    "value": "jackalopefemale",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   }
