@@ -1,0 +1,9 @@
+[
+  {// adds a petai function for foxes
+    "dependsOn": [ { "modid": "petai" } ],
+    "op": "addeach",
+    "path": "/server/behaviors/12/aitasks/4/entityCodes/-",
+    "value": [ "hazjackalope:*-*jackalope-*" ],
+    "file": "game:entities/land/fox.json"
+  }
+]
