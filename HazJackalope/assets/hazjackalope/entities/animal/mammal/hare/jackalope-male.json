@@ -1,10 +1,14 @@
-{
+{ //1.20
   "code": "hare-male",
   "class": "EntityAgent",
   "variantgroups": [
     {
       "code": "type",
       "states": [ "jackalope" ]
+    },
+    {
+      "code": "age",
+      "states": [ "adult" ]
     }
   ],
   "hitboxSize": {
@@ -57,6 +61,13 @@
       }
     ],
     "animations": [
+      {
+        "code": "attack",
+        "animation": "Attack",
+        "animationSpeed": 2.2,
+        "weight": 10,
+        "blendMode": "AddAverage"
+      },
       {
         "code": "hurt",
         "animation": "hurt",
@@ -189,7 +200,7 @@
         "aitasks": [
           {
             "code": "meleeattack",
-            "animation": "Attack Antlers",
+            "animation": "Attack",
             "enabled": true,
             "entityCodes": [ "player", "wolf-*", "bear-*", "hyena-*", "fox-*" ],
             "priority": 3,
@@ -222,12 +233,15 @@
             "animationSpeed": 2
           },
           {
-            "code": "followleadholder",
-            "minGeneration": 2,
-            "priority": 1.45,
-            "animation": "walk",
-            "animationSpeed": 2,
-            "movespeed": 0.015
+            "code": "stayclosetoentity",
+            "enabled": true,
+            "priority": 1.4,
+            "entityCode": "hare-male-jackalope",
+            "movespeed": 0.02,
+            "animationSpeed": 3,
+            "maxDistance": 5,
+            "searchRange": 25,
+            "animation": "Run"
           },
           {
             "code": "getoutofwater",
@@ -376,8 +390,8 @@
           "snowlayer-1"
         ],
         "companions": [
-          "hazjackalope:hare-female-jackalope",
-          "hazjackalope:jackalope-baby"
+          "hazjackalope:hare-female-jackalope-adult",
+          "hazjackalope:hare-baby-jackalope"
         ]
       },
       "runtime": {
@@ -398,8 +412,8 @@
           "snowlayer-1"
         ],
         "companions": [
-          "hazjackalope:hare-female-jackalope",
-          "hazjackalope:jackalope-baby"
+          "hazjackalope:hare-female-jackalope-adult",
+          "hazjackalope:hare-baby-jackalope"
         ]
       },
       "climate": { //wider range than most hares to ensure they have a chance of being seen in a few climates.

@@ -1,10 +1,14 @@
-{
+{ //1.20
   "code": "hare-female",
   "class": "EntityAgent",
   "variantgroups": [
     {
       "code": "type",
       "states": [ "jackalope" ]
+    },
+    {
+      "code": "age",
+      "states": [ "adult" ]
     }
   ],
   "hitboxSize": {
@@ -58,6 +62,13 @@
       }
     ],
     "animations": [
+      {
+        "code": "attack",
+        "animation": "Attack",
+        "animationSpeed": 2.2,
+        "weight": 10,
+        "blendMode": "AddAverage"
+      },
       {
         "code": "hurt",
         "animation": "hurt",
@@ -161,8 +172,8 @@
       { "code": "breathe" },
       {
         "code": "multiply",
-        "spawnEntityCode": "hazjackalope:jackalope-baby",
-        "requiresNearbyEntityCode": "hare-male-*",
+        "spawnEntityCode": "hazjackalope:hare-baby-jackalope",
+        "requiresNearbyEntityCode": "hare-male-jackalope",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
         "spawnQuantityMax": 4,
@@ -175,7 +186,7 @@
       {
         "dependsOn": [ { "modid": "petai" } ],
         "code": "multiply",
-        "spawnEntityCode": "hazjackalope:tamejackalope-baby",
+        "spawnEntityCode": "hazjackalope:tamehare-baby-jackalope",
         "requiresNearbyEntityCode": "hazjackalope:tamehare-male-jackalope",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
@@ -185,14 +196,22 @@
         "multiplyCooldownDaysMin": 2,
         "multiplyCooldownDaysMax": 5,
         "portionsEatenForMultiply": 2
-      },
+      },//depends on petAI, jackalope taming
       {
         "code": "emotionstates",
         "states": [
           {
+            "code": "aggressiveondamage",
+            "duration": 30,
+            "chance": 0.5,
+            "slot": 0,
+            "priority": 2,
+            "accumType": "noaccum"
+          },
+          {
             "code": "fleeondamage",
             "duration": 10,
-            "chance": 1,
+            "chance": 0.85,
             "slot": 0,
             "priority": 1,
             "accumType": "max"
@@ -213,7 +232,7 @@
         "aitasks": [
           {
             "code": "meleeattack",
-            "animation": "Attack Antlers",
+            "animation": "Attack",
             "enabled": true,
             "entityCodes": [ "player", "wolf-*", "bear-*", "hyena-*", "fox-*" ],
             "priority": 3,
@@ -244,14 +263,6 @@
             "instafleeOnDamageChance": 1,
             "animation": "Run",
             "animationSpeed": 2
-          },
-          {
-            "code": "followleadholder",
-            "minGeneration": 2,
-            "priority": 1.45,
-            "animation": "walk",
-            "animationSpeed": 2,
-            "movespeed": 0.015
           },
           {
             "code": "stayclosetoentity",
@@ -391,7 +402,7 @@
         "grownDurationMonths": 9,
         "c3": "Amount of months the antler can shed. Higher values allows players to find them for longer. A value of 0 will make antlers never drop",
         "shedDurationMonths": 1,
-        "noItemDrop": true
+        "noItemDrop": false
       }
     ]
   },

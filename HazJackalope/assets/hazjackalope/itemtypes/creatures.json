@@ -6,36 +6,48 @@
     {
       "code": "type",
       "states": [
-        "hare-female-jackalope",
-        "hare-male-jackalope",
-        "jackalope-baby"
+        "hare-male-jackalope-adult",
+        "hare-female-jackalope-adult",
+        "hare-baby-jackalope"
       ]
     }
   ],
+  "attributes": {
+    "stepParentShapesByType": {
+      "*-hare-male-jackalope-adult": [ { "base": "hazjackalope:entity/animal/mammal/hare/male-antlers04" } ],
+      "*-hare-female-jackalope-adult": [ { "base": "hazjackalope:entity/animal/mammal/hare/female-antlers04" } ]
+    }
+  },
   "shapeByType": {
-    "*-baby": { "base": "entity/animal/mammal/hare/jackalope-baby" },
-    "*-female-jackalope": { "base": "game:entity/land/hare-female" },
-    "*-male-jackalope": { "base": "game:entity/land/hare-female" }
+    "*-hare-male-jackalope-adult": { "base": "game:entity/land/hare-male" },
+    "*-hare-female-jackalope-adult": { "base": "game:entity/land/hare-female" },
+    "*-hare-baby-jackalope": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" }
   },
   "texturesByType": {
-    "jackalope-baby": { "skin": { "base": "entity/animal/mammal/hare/jackalope-baby" } },
-    "hare-female-jackalope": { "skin": { "base": "entity/animal/mammal/hare/jackalope-adult" } },
-    "hare-male-jackalope": { "kitten": { "base": "entity/animal/mammal/hare/jackalope-adult" } }
+    "*-hare-male-jackalope-adult": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
+      }
+    },
+    "*-hare-female-jackalope-adult": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
+      }
+    },
+    "*-hare-baby-jackalope": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
+      }
+    }
   },
   "creativeinventory": {
-    "general": [
-      "*"
-    ],
-    "items": [
-      "*"
-    ],
-    "creatures": [
-      "*"
-    ]
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "creatures": [ "*" ]
   },
   "materialDensity": 600,
   "guiTransformByType": {
-    "*": {
+    "*jackalope*": {
       "rotate": true,
       "translation": {
         "x": 2,
@@ -56,7 +68,7 @@
     }
   },
   "tpHandTransformByType": {
-    "hare-male-jackalope": {
+    "*-hare-male-jackalope-adult": {
       "translation": {
         "x": -0.8,
         "y": -0.4,
@@ -69,7 +81,7 @@
       },
       "scale": 0.7
     },
-    "hare-female-jackalope": {
+    "*-hare-female-jackalope-adult": {
       "translation": {
         "x": -0.8,
         "y": -0.4,
@@ -82,7 +94,7 @@
       },
       "scale": 0.7
     },
-    "jackalope-baby": {
+    "*-hare-baby-jackalope": {
       "translation": {
         "x": -0.6,
         "y": -0.1,
@@ -94,6 +106,21 @@
         "z": -156
       },
       "scale": 1
+    }
+  },
+  "fpHandTransformByType": {
+    "*jackalope*": {
+      "translation": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": -180,
+        "y": -96,
+        "z": -180
+      },
+      "scale": 1.16
     }
   }
 }
