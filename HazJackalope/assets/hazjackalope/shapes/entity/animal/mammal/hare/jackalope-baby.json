@@ -1054,7 +1054,7 @@
 
 		{
 			"name": "LongDig",
-			"code": "longdig",
+			"code": "longDig",
 			"quantityframes": 75,
 			"onActivityStopped": "PlayTillEnd",
 			"onAnimationEnd": "Stop",

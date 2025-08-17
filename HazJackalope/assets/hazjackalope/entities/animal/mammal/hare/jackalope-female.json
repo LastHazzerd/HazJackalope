@@ -78,7 +78,7 @@
       },
       {
         "code": "dig",
-        "animation": "dig",
+        "animation": "Dig",
         "animationSpeed": 1
       },
       {
@@ -173,7 +173,7 @@
       {
         "code": "multiply",
         "spawnEntityCode": "hazjackalope:hare-baby-jackalope",
-        "requiresNearbyEntityCode": "hare-male-jackalope",
+        "requiresNearbyEntityCode": "hazjackalope:hare-male-jackalope-adult",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
         "spawnQuantityMax": 4,
@@ -184,10 +184,10 @@
         "portionsEatenForMultiply": 2
       },
       {
-        "dependsOn": [ { "modid": "petai" } ],
+        "dependsOn": [ { "modid": "harepet" } ],
         "code": "multiply",
         "spawnEntityCode": "hazjackalope:tamehare-baby-jackalope",
-        "requiresNearbyEntityCode": "hazjackalope:tamehare-male-jackalope",
+        "requiresNearbyEntityCode": "hazjackalope:tamehare-male-jackalope-adult",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
         "spawnQuantityMax": 4,
@@ -268,7 +268,7 @@
             "code": "stayclosetoentity",
             "enabled": true,
             "priority": 1.4,
-            "entityCode": "hare-male-jackalope",
+            "entityCode": "hare-male-jackalope-adult",
             "movespeed": 0.02,
             "animationSpeed": 3,
             "maxDistance": 5,
@@ -320,7 +320,7 @@
             "eatLooseItems": true,
             "animationSpeed": 1.4,
             "animation": "Walk",
-            "eatAnimation": "longdig",
+            "eatAnimation": "longdig",,
             "mincooldownHours": 1,
             "maxcooldownHours": 4
           },
@@ -354,7 +354,7 @@
             "maxduration": 2500,
             "mincooldown": 12000,
             "maxcooldown": 40000,
-            "animation": "longDig",
+            "animation": "longdig",
             "animationSpeed": 1
           },
           {

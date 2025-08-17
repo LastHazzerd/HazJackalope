@@ -77,7 +77,7 @@
       },
       {
         "code": "dig",
-        "animation": "dig",
+        "animation": "Dig",
         "animationSpeed": 1
       },
       {
@@ -233,17 +233,6 @@
             "animationSpeed": 2
           },
           {
-            "code": "stayclosetoentity",
-            "enabled": true,
-            "priority": 1.4,
-            "entityCode": "hare-male-jackalope",
-            "movespeed": 0.02,
-            "animationSpeed": 3,
-            "maxDistance": 5,
-            "searchRange": 25,
-            "animation": "Run"
-          },
-          {
             "code": "getoutofwater",
             "priority": 1.4,
             "movespeed": 0.015,
@@ -288,7 +277,7 @@
             "eatLooseItems": true,
             "animationSpeed": 1.4,
             "animation": "Walk",
-            "eatAnimation": "longdig",
+            "eatAnimation": "longdig",,
             "mincooldownHours": 1,
             "maxcooldownHours": 4
           },
@@ -322,7 +311,7 @@
             "maxduration": 2500,
             "mincooldown": 12000,
             "maxcooldown": 40000,
-            "animation": "longDig",
+            "animation": "longdig",
             "animationSpeed": 1
           },
           {
