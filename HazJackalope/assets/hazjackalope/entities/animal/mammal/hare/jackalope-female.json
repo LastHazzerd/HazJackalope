@@ -320,7 +320,7 @@
             "eatLooseItems": true,
             "animationSpeed": 1.4,
             "animation": "Walk",
-            "eatAnimation": "longdig",,
+            "eatAnimation": "longdig",
             "mincooldownHours": 1,
             "maxcooldownHours": 4
           },
