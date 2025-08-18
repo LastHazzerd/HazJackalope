@@ -948,13 +948,16 @@
         "enabled": true,
         "overrideType": "jackalopefemale",
         "variants": [ "01", "02", "03", "04" ],
-        "beginGrowMonth": 3,
+        "beginGrowMonth": 7,
+
         "c1": "Amount of months until full growth. Must be less than 12 months (including grown and shed duration)",
-        "growDurationMonths": 3,
+        "growDurationMonths": 2.5,
+
         "c2": "Amount of months the antler can be at full growth until shedding",
-        "grownDurationMonths": 9,
+        "grownDurationMonths": 6,
+
         "c3": "Amount of months the antler can shed. Higher values allows players to find them for longer. A value of 0 will make antlers never drop",
-        "shedDurationMonths": 1,
+        "shedDurationMonths": 0.5,
         "noItemDrop": false
       }
     ]
