@@ -1,0 +1,41 @@
+[
+  {
+    "dependsOn": [ { "modid": "moreanimals" } ],
+    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-male.json",
+    "op": "addmerge",
+    "path": "/attributes",
+    "side": "Server",
+    "value": {
+      "biorealm": [
+        "pacific nearctic",
+        "atlantic nearctic"
+      ]
+    }
+  }, //adds the biorealm attribute to jackalope-male
+  {
+    "dependsOn": [ { "modid": "moreanimals" } ],
+    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-female.json",
+    "op": "addmerge",
+    "path": "/attributes",
+    "side": "Server",
+    "value": {
+      "biorealm": [
+        "pacific nearctic",
+        "atlantic nearctic"
+      ]
+    }
+  }, //adds the biorealm attribute to jackalope-female
+  {
+    "dependsOn": [ { "modid": "moreanimals" } ],
+    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-baby.json",
+    "op": "addmerge",
+    "path": "/attributes",
+    "side": "Server",
+    "value": {
+      "biorealm": [
+        "pacific nearctic",
+        "atlantic nearctic"
+      ]
+    }
+  } //adds the biorealm attribute to jackalope-female
+]
