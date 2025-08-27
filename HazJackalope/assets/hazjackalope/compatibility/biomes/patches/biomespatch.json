@@ -1,6 +1,6 @@
 [
   {
-    "dependsOn": [ { "modid": "moreanimals" } ],
+    "dependsOn": [ { "modid": "biomes" } ],
     "file": "hazjackalope:entities/animal/mammal/hare/jackalope-male.json",
     "op": "addmerge",
     "path": "/attributes",
@@ -13,7 +13,7 @@
     }
   }, //adds the biorealm attribute to jackalope-male
   {
-    "dependsOn": [ { "modid": "moreanimals" } ],
+    "dependsOn": [ { "modid": "biomes" } ],
     "file": "hazjackalope:entities/animal/mammal/hare/jackalope-female.json",
     "op": "addmerge",
     "path": "/attributes",
@@ -26,7 +26,7 @@
     }
   }, //adds the biorealm attribute to jackalope-female
   {
-    "dependsOn": [ { "modid": "moreanimals" } ],
+    "dependsOn": [ { "modid": "biomes" } ],
     "file": "hazjackalope:entities/animal/mammal/hare/jackalope-baby.json",
     "op": "addmerge",
     "path": "/attributes",
