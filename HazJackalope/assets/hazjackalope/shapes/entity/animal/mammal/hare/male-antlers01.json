@@ -1,0 +1,170 @@
+{
+  "editor": {
+    "backDropShape": "animal/mammal/hare/jackalope-male",
+    "allAngles": true,
+    "entityTextureMode": false
+  },
+  "textureWidth": 32,
+  "textureHeight": 32,
+  "textureSizes": {
+    "skin": [ 32, 32 ]
+  },
+  "textures": {
+    "skin": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
+  },
+  "elements": [
+    {
+      "name": "Horn Root",
+      "stepParentName": "head",
+      "from": [ 0.7, 1.8, 1.5 ],
+      "to": [ 0.7, 1.8, 1.5 ],
+      "rotationOrigin": [ 1.0, 1.25, 1.5 ],
+      "faces": {
+      },
+      "children": [
+        {
+          "name": "L antler hub",
+          "from": [ 0.2, 0.3, 0.6 ],
+          "to": [ 0.6, 0.9, 1.0 ],
+          "rotationOrigin": [ 0.4, 0.6, 0.8 ],
+          "rotationX": 14.0,
+          "rotationZ": 5.0,
+          "faces": {
+            "north": {
+              "texture": "#skin",
+              "uv": [ 16.0, 18.5, 16.5, 19.0 ]
+            },
+            "east": {
+              "texture": "#skin",
+              "uv": [ 16.5, 18.5, 17.0, 19.0 ]
+            },
+            "south": {
+              "texture": "#skin",
+              "uv": [ 17.0, 18.5, 17.5, 19.0 ]
+            },
+            "west": {
+              "texture": "#skin",
+              "uv": [ 17.5, 18.5, 18.0, 19.0 ]
+            },
+            "up": {
+              "texture": "#skin",
+              "uv": [ 16.0, 18.0, 16.5, 18.5 ]
+            },
+            "down": {
+              "texture": "#skin",
+              "uv": [ 16.5, 18.0, 17.0, 18.5 ]
+            }
+          },
+          "children": [
+            {
+              "name": "Lbeam1",
+              "from": [ 0.02, 0.38, 0.02 ],
+              "to": [ 0.32, 0.88, 0.32 ],
+              "rotationOrigin": [ 0.17, 0.38, 0.17 ],
+              "rotationX": 8.0,
+              "rotationY": -30.0,
+              "rotationZ": -33.0,
+              "faces": {
+                "north": {
+                  "texture": "#skin",
+                  "uv": [ 16.0, 16.5, 16.5, 17.0 ]
+                },
+                "east": {
+                  "texture": "#skin",
+                  "uv": [ 16.5, 16.5, 17.0, 17.0 ]
+                },
+                "south": {
+                  "texture": "#skin",
+                  "uv": [ 17.0, 16.5, 17.5, 17.0 ]
+                },
+                "west": {
+                  "texture": "#skin",
+                  "uv": [ 17.5, 16.5, 18.0, 17.0 ]
+                },
+                "up": {
+                  "texture": "#skin",
+                  "uv": [ 16.0, 16.0, 16.5, 16.5 ]
+                },
+                "down": {
+                  "texture": "#skin",
+                  "uv": [ 16.5, 16.0, 17.0, 16.5 ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "R antler hub",
+          "from": [ 0.2, 0.3, -1.05 ],
+          "to": [ 0.6, 0.9, -0.65 ],
+          "rotationOrigin": [ 0.4, 0.6, -0.85 ],
+          "rotationX": -14.0,
+          "rotationZ": 5.0,
+          "faces": {
+            "north": {
+              "texture": "#skin",
+              "uv": [ 16.0, 18.5, 16.5, 19.0 ]
+            },
+            "east": {
+              "texture": "#skin",
+              "uv": [ 16.5, 18.5, 17.0, 19.0 ]
+            },
+            "south": {
+              "texture": "#skin",
+              "uv": [ 17.0, 18.5, 17.5, 19.0 ]
+            },
+            "west": {
+              "texture": "#skin",
+              "uv": [ 17.5, 18.5, 18.0, 19.0 ]
+            },
+            "up": {
+              "texture": "#skin",
+              "uv": [ 16.0, 18.0, 16.5, 18.5 ]
+            },
+            "down": {
+              "texture": "#skin",
+              "uv": [ 16.5, 18.0, 17.0, 18.5 ]
+            }
+          },
+          "children": [
+            {
+              "name": "Rbeam1",
+              "from": [ 0.02, 0.38, 0.08 ],
+              "to": [ 0.32, 0.88, 0.38 ],
+              "rotationOrigin": [ 0.17, 0.38, 0.23 ],
+              "rotationX": -8.0,
+              "rotationY": 30.0,
+              "rotationZ": -33.0,
+              "faces": {
+                "north": {
+                  "texture": "#skin",
+                  "uv": [ 16.0, 16.5, 16.5, 17.0 ]
+                },
+                "east": {
+                  "texture": "#skin",
+                  "uv": [ 16.5, 16.5, 17.0, 17.0 ]
+                },
+                "south": {
+                  "texture": "#skin",
+                  "uv": [ 17.0, 16.5, 17.5, 17.0 ]
+                },
+                "west": {
+                  "texture": "#skin",
+                  "uv": [ 17.5, 16.5, 18.0, 17.0 ]
+                },
+                "up": {
+                  "texture": "#skin",
+                  "uv": [ 16.0, 16.0, 16.5, 16.5 ]
+                },
+                "down": {
+                  "texture": "#skin",
+                  "uv": [ 16.5, 16.0, 17.0, 16.5 ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

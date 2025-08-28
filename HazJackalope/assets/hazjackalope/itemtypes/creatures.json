@@ -1,0 +1,126 @@
+{
+  "code": "creature",
+  "class": "ItemCreature",
+  "maxstacksize": 64,
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [
+        "hare-male-jackalope-adult",
+        "hare-female-jackalope-adult",
+        "hare-baby-jackalope"
+      ]
+    }
+  ],
+  "attributes": {
+    "stepParentShapesByType": {
+      "*-hare-male-jackalope-adult": [ { "base": "hazjackalope:entity/animal/mammal/hare/male-antlers04" } ],
+      "*-hare-female-jackalope-adult": [ { "base": "hazjackalope:entity/animal/mammal/hare/female-antlers04" } ]
+    }
+  },
+  "shapeByType": {
+    "*-hare-male-jackalope-adult": { "base": "game:entity/land/hare-male" },
+    "*-hare-female-jackalope-adult": { "base": "game:entity/land/hare-female" },
+    "*-hare-baby-jackalope": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" }
+  },
+  "texturesByType": {
+    "*-hare-male-jackalope-adult": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
+      }
+    },
+    "*-hare-female-jackalope-adult": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
+      }
+    },
+    "*-hare-baby-jackalope": {
+      "skin": {
+        "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
+      }
+    }
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "creatures": [ "*" ]
+  },
+  "materialDensity": 600,
+  "guiTransformByType": {
+    "*jackalope*": {
+      "rotate": true,
+      "translation": {
+        "x": 2,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 4,
+        "y": -59,
+        "z": -180
+      },
+      "origin": {
+        "x": 0.54,
+        "y": 0.28,
+        "z": 0.5
+      },
+      "scale": 2.6
+    }
+  },
+  "tpHandTransformByType": {
+    "*-hare-male-jackalope-adult": {
+      "translation": {
+        "x": -0.8,
+        "y": -0.4,
+        "z": -0.5
+      },
+      "rotation": {
+        "x": -180,
+        "y": 0,
+        "z": -156
+      },
+      "scale": 0.7
+    },
+    "*-hare-female-jackalope-adult": {
+      "translation": {
+        "x": -0.8,
+        "y": -0.4,
+        "z": -0.5
+      },
+      "rotation": {
+        "x": -180,
+        "y": 0,
+        "z": -156
+      },
+      "scale": 0.7
+    },
+    "*-hare-baby-jackalope": {
+      "translation": {
+        "x": -0.6,
+        "y": -0.1,
+        "z": -0.3
+      },
+      "rotation": {
+        "x": -180,
+        "y": 0,
+        "z": -156
+      },
+      "scale": 1
+    }
+  },
+  "fpHandTransformByType": {
+    "*jackalope*": {
+      "translation": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": -180,
+        "y": -96,
+        "z": -180
+      },
+      "scale": 1.16
+    }
+  }
+}
