@@ -6,35 +6,36 @@
     {
       "code": "type",
       "states": [
-        "hare-male-jackalope-adult",
-        "hare-female-jackalope-adult",
-        "hare-baby-jackalope"
+        "hare-jackalope-adult-male",
+        "hare-jackalope-adult-female",
+        "hare-jackalope-baby-male",
+        "hare-jackalope-baby-female"
       ]
     }
   ],
   "attributes": {
     "stepParentShapesByType": {
-      "*-hare-male-jackalope-adult": [ { "base": "hazjackalope:entity/animal/mammal/hare/male-antlers04" } ],
-      "*-hare-female-jackalope-adult": [ { "base": "hazjackalope:entity/animal/mammal/hare/female-antlers04" } ]
+      "*-hare-jackalope-adult-male": [ { "base": "hazjackalope:entity/animal/mammal/hare/male-antlers04" } ],
+      "*-hare-jackalope-adult-female": [ { "base": "hazjackalope:entity/animal/mammal/hare/female-antlers04" } ]
     }
   },
   "shapeByType": {
-    "*-hare-male-jackalope-adult": { "base": "game:entity/land/hare-male" },
-    "*-hare-female-jackalope-adult": { "base": "game:entity/land/hare-female" },
-    "*-hare-baby-jackalope": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" }
+    "*-hare-jackalope-adult-male": { "base": "game:entity/animal/mammal/hare/european-male" },
+    "*-hare-jackalope-adult-female": { "base": "game:entity/animal/mammal/hare/european-female" },
+    "*-hare-jackalope-baby-*": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" }
   },
   "texturesByType": {
-    "*-hare-male-jackalope-adult": {
+    "*-hare-jackalope-adult-male": {
       "skin": {
         "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
       }
     },
-    "*-hare-female-jackalope-adult": {
+    "*-hare-jackalope-adult-female": {
       "skin": {
         "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult"
       }
     },
-    "*-hare-baby-jackalope": {
+    "*-hare-jackalope-baby-*": {
       "skin": {
         "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby"
       }
@@ -68,7 +69,7 @@
     }
   },
   "tpHandTransformByType": {
-    "*-hare-male-jackalope-adult": {
+    "*-hare-jackalope-adult-male": {
       "translation": {
         "x": -0.8,
         "y": -0.4,
@@ -81,7 +82,7 @@
       },
       "scale": 0.7
     },
-    "*-hare-female-jackalope-adult": {
+    "*-hare-jackalope-adult-female": {
       "translation": {
         "x": -0.8,
         "y": -0.4,
@@ -94,7 +95,7 @@
       },
       "scale": 0.7
     },
-    "*-hare-baby-jackalope": {
+    "*-hare-jackalope-baby-*": {
       "translation": {
         "x": -0.6,
         "y": -0.1,

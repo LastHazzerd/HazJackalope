@@ -1,7 +1,12 @@
 {
-  "code": "tamehare-female",
+  "code": "tamehare", //tamehare-female-jackalope-adult
   "class": "EntityAgent",
+  "tags": [ "animal", "huntable", "adult", "habitat-land" ],
   "variantgroups": [
+    {
+      "code": "gender",
+      "states": [ "female" ]
+    },
     {
       "code": "type",
       "states": [ "jackalope" ]
@@ -18,25 +23,41 @@
   "attributes": {
     "creatureDiet": {
       "foodCategories": [ "Vegetable" ],
-      "foodTags": [ "nibbleCrop" ]
+      "weightedFoodTags": [
+        {
+          "weight": 0.5,
+          "code": "nibbleCrop"
+        },
+        {
+          "weight": 1,
+          "code": "tastyvegetable"
+        },
+        {
+          "weight": 0.2,
+          "code": "cassava"
+        }
+      ]
     },
     "basketCatchable": true,
     "trapChance": 0.5,
     "trapDestroyChance": 0,
-    "handbook": { "groupcode": "creaturegroup-tamehare" }
+    "handbook": { "groupcode": "creaturegroup-hare" }
   },
   "eyeHeight": 0.6,
   "drops": [],
   "client": {
     "renderer": "Shape",
-    "shape": { "base": "game:entity/land/hare-female" },
+    "shapeByType": {
+      "*-male*": { "base": "game:entity/animal/mammal/hare/european-male" },
+      "*-female*": { "base": "game:entity/animal/mammal/hare/european-female" }
+    },
     "textures": {
       "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
     },
     "behaviors": [
       { "code": "nametag" },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "receivecommand",
         "availableCommands": [
           {
@@ -82,7 +103,7 @@
         ]
       },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "tameable",
         "size": "small",
         "disobediencePerDay": 0,
@@ -343,7 +364,7 @@
     "behaviors": [
       { "code": "nametag" },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "receivecommand",
         "availableCommands": [
           {
@@ -389,7 +410,7 @@
         ]
       },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "tameable",
         "size": "small",
         "disobediencePerDay": 0,
@@ -620,8 +641,11 @@
       { "code": "breathe" },
       {
         "code": "multiply",
-        "spawnEntityCode": "hazjackalope:tamehare-baby-jackalope",
-        "requiresNearbyEntityCode": "hazjackalope:hare-male-jackalope-adult",
+        "spawnEntityCodes": [
+          { "code": "tamehare-baby-male-{type}" },
+          { "code": "tamehare-baby-female-{type}" }
+        ],
+        "requiresNearbyEntityCode": "hazjackalope:hare-jackalope-adult-male",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
         "spawnQuantityMax": 4,
@@ -633,8 +657,11 @@
       },
       {
         "code": "multiply",
-        "spawnEntityCode": "hazjackalope:tamehare-baby-jackalope",
-        "requiresNearbyEntityCode": "hazjackalope:tamehare-male-jackalope-adult",
+        "spawnEntityCodes": [
+          { "code": "tamehare-baby-male-{type}" },
+          { "code": "tamehare-baby-female-{type}" }
+        ],
+        "requiresNearbyEntityCode": "hazjackalope:tamehare-jackalope-adult-male",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
         "spawnQuantityMax": 4,

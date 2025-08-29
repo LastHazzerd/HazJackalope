@@ -1,7 +1,12 @@
 {
-  "code": "tamehare-male",
+  "code": "tamehare", //tamehare-male-jackalope-adult
   "class": "EntityAgent",
+  "tags": [ "animal", "huntable", "adult", "habitat-land" ],
   "variantgroups": [
+    {
+      "code": "gender",
+      "states": [ "male" ]
+    },
     {
       "code": "type",
       "states": [ "jackalope" ]
@@ -18,25 +23,41 @@
   "attributes": {
     "creatureDiet": {
       "foodCategories": [ "Vegetable" ],
-      "foodTags": [ "nibbleCrop" ]
+      "weightedFoodTags": [
+        {
+          "weight": 0.5,
+          "code": "nibbleCrop"
+        },
+        {
+          "weight": 1,
+          "code": "tastyvegetable"
+        },
+        {
+          "weight": 0.2,
+          "code": "cassava"
+        }
+      ]
     },
     "basketCatchable": true,
     "trapChance": 0.5,
     "trapDestroyChance": 0,
-    "handbook": { "groupcode": "creaturegroup-tamehare" }
+    "handbook": { "groupcode": "creaturegroup-hare" }
   },
   "eyeHeight": 0.6,
   "drops": [],
   "client": {
     "renderer": "Shape",
-    "shape": { "base": "game:entity/land/hare-male" },
+    "shapeByType": {
+      "*-male*": { "base": "game:entity/animal/mammal/hare/european-male" },
+      "*-female*": { "base": "game:entity/animal/mammal/hare/european-female" }
+    },
     "textures": {
       "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
     },
     "behaviors": [
       { "code": "nametag" },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "receivecommand",
         "availableCommands": [
           {
@@ -82,7 +103,7 @@
         ]
       },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "tameable",
         "size": "small",
         "disobediencePerDay": 0,
@@ -342,7 +363,7 @@
     "behaviors": [
       { "code": "nametag" },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "receivecommand",
         "availableCommands": [
           {
@@ -388,7 +409,7 @@
         ]
       },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "tameable",
         "size": "small",
         "disobediencePerDay": 0,

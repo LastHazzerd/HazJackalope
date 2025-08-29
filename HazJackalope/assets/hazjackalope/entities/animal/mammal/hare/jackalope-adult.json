@@ -1,15 +1,12 @@
-{ //1.20
-  "code": "hare-female",
+{
+  "code": "hare", //hare-jackalope-adult-male
   "class": "EntityAgent",
+  "tags": [ "animal", "huntable", "adult", "habitat-land" ],
+  "weight": 4,
   "variantgroups": [
-    {
-      "code": "type",
-      "states": [ "jackalope" ]
-    },
-    {
-      "code": "age",
-      "states": [ "adult" ]
-    }
+    {"code": "type", "states": [ "jackalope" ] },
+    {"code": "age", "states": [ "adult" ] },
+    {"code": "gender", "states": [ "male", "female" ] }
   ],
   "hitboxSize": {
     "x": 0.75,
@@ -18,11 +15,27 @@
   "attributes": {
     "creatureDiet": {
       "foodCategories": [ "Vegetable" ],
-      "foodTags": [ "nibbleCrop" ]
+      "weightedFoodTags": [
+        {
+          "weight": 0.5,
+          "code": "nibbleCrop"
+        },
+        {
+          "weight": 1,
+          "code": "tastyvegetable"
+        },
+        {
+          "weight": 0.2,
+          "code": "cassava"
+        }
+      ]
     },
-    "basketCatchable": true,
-    "trapChance": 0.5,
-    "trapDestroyChance": 0.00,
+    "trappable": {
+      "small": {
+        "trapChance": 0.5,
+        "trapDestroyChance": 0.01
+      }
+    },
     "handbook": {
       "groupcode": "creaturegroup-hare"
     }
@@ -33,7 +46,10 @@
   ],
   "client": {
     "renderer": "Shape",
-    "shape": { "base": "game:entity/land/hare-female" },
+    "shapeByType": {
+      "*-male": { "base": "game:entity/animal/mammal/hare/european-male" },
+      "*-female": { "base": "game:entity/animal/mammal/hare/european-female" }
+    },
     "textures": {
       "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" }
     },
@@ -48,7 +64,13 @@
         "onlyWhenDead": true
       },
       { "code": "interpolateposition" },
-      { "code": "multiply" },
+      {
+        "code": "multiply",
+        "enabledByType": {
+          "*-female": true,
+          "*": false
+        }
+      },
       { "code": "harvestable" },
       {
         "code": "despawn",
@@ -59,6 +81,10 @@
       {
         "code": "antlergrowth",
         "enabled": true
+      },
+      {
+        "code": "ropetieable",
+        "minGeneration": 2
       }
     ],
     "animations": [
@@ -172,8 +198,11 @@
       { "code": "breathe" },
       {
         "code": "multiply",
-        "spawnEntityCode": "hazjackalope:hare-baby-jackalope",
-        "requiresNearbyEntityCode": "hazjackalope:hare-male-jackalope-adult",
+        "spawnEntityCodes": [
+          { "code": "hare-{type}-baby-male" },
+          { "code": "hare-{type}-baby-female" }
+        ],
+        "requiresNearbyEntityCode": "hare-{type}-adult-male",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
         "spawnQuantityMax": 4,
@@ -184,34 +213,12 @@
         "portionsEatenForMultiply": 2
       },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
-        "code": "multiply",
-        "spawnEntityCode": "hazjackalope:tamehare-baby-jackalope",
-        "requiresNearbyEntityCode": "hazjackalope:tamehare-male-jackalope-adult",
-        "requiresNearbyEntityRange": 10,
-        "spawnQuantityMin": 1,
-        "spawnQuantityMax": 4,
-        "eatAnyway": true,
-        "pregnancyDays": 5,
-        "multiplyCooldownDaysMin": 2,
-        "multiplyCooldownDaysMax": 5,
-        "portionsEatenForMultiply": 2
-      },//depends on petAI, jackalope taming
-      {
         "code": "emotionstates",
         "states": [
           {
-            "code": "aggressiveondamage",
-            "duration": 30,
-            "chance": 0.5,
-            "slot": 0,
-            "priority": 2,
-            "accumType": "noaccum"
-          },
-          {
             "code": "fleeondamage",
             "duration": 10,
-            "chance": 0.85,
+            "chance": 1,
             "slot": 0,
             "priority": 1,
             "accumType": "max"
@@ -231,32 +238,8 @@
         "aiCreatureType": "LandCreature",
         "aitasks": [
           {
-            "code": "meleeattack",
-            "animation": "Attack",
-            "enabled": true,
-            "entityCodes": [ "player", "wolf-*", "bear-*", "hyena-*", "fox-*" ],
-            "priority": 3,
-            "damage": 1,
-            "damageTier": 2,
-            "damageType": "SlashingAttack",
-            "slot": 1,
-            "mincooldown": 1500,
-            "maxcooldown": 2500,
-            "attackDurationMs": 1250,
-            "damagePlayerAtMs": 500,
-            "animationSpeed": 2.5,
-            "sound": "game:creature/hare-hurt",
-            "whenInEmotionState": "aggressiveondamage"
-          },
-          {
             "code": "fleeentity",
-            "entityCodes": [
-              "player",
-              "wolf-*",
-              "fox-*",
-              "hyena-*",
-              "bear-*"
-            ],
+            "entityCodes": [ "player", "wolf-*", "fox-*", "hyena-*", "bear-*" ],
             "priority": 2,
             "movespeed": 0.06,
             "seekingRange": 14,
@@ -265,10 +248,21 @@
             "animationSpeed": 2
           },
           {
+            "code": "followleadholder",
+            "minGeneration": 2,
+            "priority": 1.45,
+            "animation": "walk",
+            "animationSpeed": 2,
+            "movespeed": 0.015
+          },
+          {
             "code": "stayclosetoentity",
-            "enabled": true,
+            "enabledByType": {
+              "*-adult-female": true,
+              "*": false
+            },
             "priority": 1.4,
-            "entityCode": "hare-male-jackalope-adult",
+            "entityCode": "hare-{type}-adult-male",
             "movespeed": 0.02,
             "animationSpeed": 3,
             "maxDistance": 5,
@@ -302,19 +296,13 @@
                 "toHour": 4
               }
             ],
-            "stopOnNearbyEntityCodes": [
-              "player",
-              "wolf-*",
-              "fox-*",
-              "hyena-*",
-              "bear-*"
-            ],
+            "stopOnNearbyEntityCodes": [ "player", "wolf-*", "fox-*", "hyena-*", "bear-*" ],
             "stopRange": 8,
             "stopOnHurt": true
           },
           {
             "code": "seekfoodandeat",
-            "movespeed": 0.01,
+            "movespeed": 0.010,
             "priority": 1.25,
             "eatTime": 2.3,
             "eatLooseItems": true,
@@ -354,7 +342,7 @@
             "maxduration": 2500,
             "mincooldown": 12000,
             "maxcooldown": 40000,
-            "animation": "longdig",
+            "animation": "longDig",
             "animationSpeed": 1
           },
           {
@@ -393,7 +381,10 @@
       {
         "code": "antlergrowth",
         "enabled": true,
-        "overrideType": "jackalopefemale",
+        "overrideTypeByType": {
+          "*-male":  "jackalopemale",
+          "*-female": "jackalopefemale"
+        },
         "variants": [ "01", "02", "03", "04" ],
         "beginGrowMonth": 7,
 
@@ -406,8 +397,62 @@
         "c3": "Amount of months the antler can shed. Higher values allows players to find them for longer. A value of 0 will make antlers never drop",
         "shedDurationMonths": 0.5,
         "noItemDrop": false
+      },
+      { "code": "entitystatetags" }
+    ],
+    "spawnconditions": {
+      "worldgen": {
+        "TriesPerChunk": {
+          "avg": 0.1, //default hare is ave 0.14
+          "var": 0
+        },
+        "tryOnlySurface": true,
+        "groupSize": {
+          "dist": "uniform",
+          "avg": 1,
+          "var": 3
+        },
+        "insideBlockCodes": [
+          "tallgrass-*",
+          "snowlayer-1"
+        ],
+        "companions": [
+          "hazjackalope:hare-jackalope-adult-female",
+          "hazjackalope:hare-jackalope-baby"
+        ]
+      },
+      "runtime": {
+        "group": "neutral",
+        "tryOnlySurface": true,
+        "chance": 0.005, //default hare is chance 0.007
+        "maxQuantity": 3,
+        "__comment": "Make them spawn away from artifical light so they don't spawn inside farmland",
+        "maxLightLevel": 6,
+        "lightLevelType": "onlyBlockLight",
+        "groupSize": {
+          "dist": "uniform",
+          "avg": 1,
+          "var": 3
+        },
+        "insideBlockCodes": [
+          "tallgrass-*",
+          "snowlayer-1"
+        ],
+        "companions": [
+          "hazjackalope:hare-jackalope-adult-female",
+          "hazjackalope:hare-jackalope-baby"
+        ]
+      },
+      "climate": { //wider range than most hares to ensure they have a chance of being seen in a few climates.
+        "minTemp": -15,
+        "maxTemp": 25,
+        "minRain": 0.25,
+        "maxRain": 0.9,
+        "minForestOrShrubs": 0.3,
+        "maxForest": 0.9,
+        "maxShrubs": 0.9
       }
-    ]
+    }
   },
   "sounds": {
     "hurt": "game:creature/hare-hurt",

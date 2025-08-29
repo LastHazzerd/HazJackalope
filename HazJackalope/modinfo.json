@@ -6,7 +6,7 @@
         "LastHazzerd"
     ],
     "description": "Adds a rare hare varient with antlers.",
-    "version": "0.9.3",
+    "version": "1.0.1",
     "dependencies": {
         "game": ""
     }

@@ -2,98 +2,97 @@
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "addmerge",
-    "path": "/server/behaviors/-",
-    "value": {
-      "code": "butcherable",
-      "item": "butchering:deadhare-female-{type}-dead"
-    },
-    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-female.json"
-  }, //adds 'butchering' to female jackalope server behavior
-  {
-    "dependsOn": [ { "modid": "butchering" } ],
-    "op": "addmerge",
-    "path": "/client/behaviors/-",
-    "value": {
-      "code": "butcherable",
-      "item": "butchering:deadhare-female-{type}-dead"
-    },
-    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-female.json"
-  }, //adds 'butchering' to female jackalope client behavior
-  {
-    "dependsOn": [ { "modid": "butchering" } ],
-    "op": "addmerge",
-    "path": "/server/behaviors/-",
-    "value": {
-      "code": "butcherable",
-      "item": "butchering:deadhare-male-{type}-dead"
-    },
-    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-male.json"
-  }, //adds 'butchering' to male jackalope server behavior
-  {
-    "dependsOn": [ { "modid": "butchering" } ],
-    "op": "addmerge",
-    "path": "/client/behaviors/-",
-    "value": {
-      "code": "butcherable",
-      "item": "butchering:deadhare-male-{type}-dead"
-    },
-    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-male.json"
-  }, //adds 'butchering to male jackalope client behavior
-  {
-    "dependsOn": [ { "modid": "butchering" } ],
-    "op": "addmerge",
-    "path": "/server/behaviors/-",
-    "value": {
-      "code": "butcherable",
-      "item": "butchering:deadhare-baby-jackalope-dead"
-    },
-    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-baby.json"
-  }, //adds 'butchering' to baby jackalope server behavior
-  {
-    "dependsOn": [ { "modid": "butchering" } ],
-    "op": "addmerge",
-    "path": "/client/behaviors/-",
-    "value": {
-      "code": "butcherable",
-      "item": "butchering:deadhare-baby-brown-dead"
-    },
-    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-baby.json"
-  }, //adds 'butchering' to baby jackalope client behavior
-  {
-    "dependsOn": [ { "modid": "butchering" } ],
-    "op": "addmerge",
     "path": "/variantgroups/1/states/-",
     "value": "jackalope",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //adds 'jackalope' variant to butchering's deadhare
   {
     "dependsOn": [ { "modid": "butchering" } ],
-    "op": "addmerge",
+    "op": "addEach",
     "path": "/allowedVariants/-",
-    "value": "deadhare-baby-jackalope-*",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
-  }, //adds 'baby-jackalope' variant to butchering's deadhare
+    "value": [
+      "deadhare-male-jackalope-1-*",
+      "deadhare-female-jackalope-1-*",
+      "deadhare-baby-jackalope-1-*"
+    ],
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
+  },//adds 'jackalope' to the allowed varients in butchering's deadhare
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": {
+      "code": "butcherable",
+      "itemByType": {
+        "*-adult-male": "butchering:deadhare-male-{type}-1-dead",
+        "*-adult-female": "butchering:deadhare-female-{type}-1-dead"
+      }
+    },
+    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-adult.json",
+    "side": "server"
+  }, //adds butcherable to jackalope adult, server side
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": {
+      "code": "butcherable",
+      "itemByType": {
+        "*-adult-male": "butchering:deadhare-male-{type}-1-dead",
+        "*-adult-female": "butchering:deadhare-female-{type}-1-dead"
+      }
+    },
+    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-adult.json",
+    "side": "server"
+  }, //adds butcherable to jackalope adult, client side
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": {
+      "code": "butcherable",
+      "itemByType": {
+        "*-baby-*": "butchering:deadhare-male-{type}-1-dead"
+      }
+    },
+    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-baby.json",
+    "side": "server"
+  }, //adds butcherable to jackalope baby, server side
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": {
+      "code": "butcherable",
+      "itemByType": {
+        "*-baby-*": "butchering:deadhare-male-{type}-1-dead"
+      }
+    },
+    "file": "hazjackalope:entities/animal/mammal/hare/jackalope-baby.json",
+    "side": "server"
+  }, //adds butcherable to jackalope baby, client side
   // ===adds jackalope-adult texture to butchering's deadhare-male item===
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "move",
     "frompath": "/texturesByType/deadhare-male-*-dead",
     "path": "/temp",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //move male-* wildcard to temp filepatch
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "addmerge",
-    "path": "/texturesByType/deadhare-male-jackalope-dead",
+    "path": "/texturesByType/deadhare-male-jackalope-1-dead",
     "value": { "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" } },
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //insert male-jackalope infront of wildcard varient
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "move",
     "frompath": "/temp",
     "path": "/texturesByType/deadhare-male-*-dead",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //return male-* wildcard from temp filepatch
   // ===adds jackalope-adult texture to butchering's deadhare-female item===
   {
@@ -101,21 +100,24 @@
     "op": "move",
     "frompath": "/texturesByType/deadhare-female-*-dead",
     "path": "/temp",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //move female-* wildcard to temp filepatch
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "addmerge",
-    "path": "/texturesByType/deadhare-female-jackalope-dead",
+    "path": "/texturesByType/deadhare-female-jackalope-1-dead",
     "value": { "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-adult" } },
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //insert female-jackalope infront of wildcard varient
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "move",
     "frompath": "/temp",
     "path": "/texturesByType/deadhare-female-*-dead",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //return female-* wildcard from temp filepatch
   // ===adds jackalope-baby texture to butchering's deadhare-baby item===
   {
@@ -123,20 +125,23 @@
     "op": "move",
     "frompath": "/texturesByType/deadhare-baby-*-dead",
     "path": "/temp",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //move baby-* wildcard to temp filepatch
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "addmerge",
-    "path": "/texturesByType/deadhare-baby-jackalope-dead",
+    "path": "/texturesByType/deadhare-baby-jackalope-1-dead",
     "value": { "skin": { "base": "hazjackalope:entity/animal/mammal/hare/jackalope-baby" } },
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   }, //insert baby-jackalope infront of wildcard varient
   {
     "dependsOn": [ { "modid": "butchering" } ],
     "op": "move",
     "frompath": "/temp",
     "path": "/texturesByType/deadhare-baby-*-dead",
-    "file": "butchering:itemtypes/butchercreatures/hare.json"
+    "file": "butchering:itemtypes/butchercreatures/hare.json",
+    "side": "server"
   } //return baby-* wildcard from temp filepatch
 ]

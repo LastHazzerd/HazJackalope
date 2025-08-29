@@ -1,12 +1,12 @@
-{ //1.20
-  "code": "hare-baby",
+{
+  "code": "hare", //hare-jackalope-baby-male
   "class": "EntityAgent",
+	"tags": ["animal", "huntable", "habitat-land"],
   "enabled": true,
   "variantgroups": [
-    {
-      "code": "type",
-      "states": [ "jackalope" ]
-    }
+    {"code": "type", "states": [ "jackalope" ] },
+    {"code": "age", "states": [ "baby" ] },
+    {"code": "gender", "states": [ "male", "female" ] }
   ],
   "hitboxSize": {
     "x": 0.4,
@@ -16,7 +16,20 @@
   "attributes": {
     "creatureDiet": {
       "foodCategories": [ "Vegetable" ],
-      "foodTags": [ "nibbleCrop" ]
+      "weightedFoodTags": [
+        {
+          "weight": 0.5,
+          "code": "nibbleCrop"
+        },
+        {
+          "weight": 1,
+          "code": "tastyvegetable"
+        },
+        {
+          "weight": 0.2,
+          "code": "cassava"
+        }
+      ]
     },
     "basketCatchable": true,
     "trapChance": 0.8,
@@ -52,7 +65,7 @@
         "minSeconds": 200
       },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "tameable",
         "size": "small",
         "treat": [
@@ -149,7 +162,7 @@
         ]
       },
       {
-        "dependsOn": [ { "modid": "harepet" } ],
+        "dependsOn": [ { "modid": "petai" } ],
         "code": "mouthinventory",
         "acceptStacks": [
           {
@@ -300,7 +313,7 @@
       { "code": "breathe" },
       {
         "hoursToGrow": 336,
-        "adultEntityCodes": [ "hazjackalope:hare-male-jackalope-adult", "hazjackalope:hare-female-jackalope-adult" ],
+        "adultEntityCodes": [ "hazjackalope:hare-jackalope-adult-{gender}" ],
         "code": "grow"
       },
       {
@@ -325,9 +338,21 @@
             "animationSpeed": 2.2
           },
           {
+            "code": "seekfoodandeat",
+            "movespeed": 0.010,
+            "priority": 1.25,
+            "eatTime": 2.3,
+            "eatLooseItems": true,
+            "animationSpeed": 1.4,
+            "animation": "Walk",
+            "eatAnimation": "longdig",
+            "mincooldownHours": 1,
+            "maxcooldownHours": 4
+          },
+          {
             "code": "stayclosetoentity",
             "priority": 1.4,
-            "entityCode": "hare-female-jackalope-adult",
+            "entityCode": "hare-{type}-adult-female",
             "movespeed": 0.02,
             "animationSpeed": 3,
             "maxDistance": 5,
@@ -413,7 +438,7 @@
             "priority": 0.5
           },
           {
-            "dependsOn": [ { "modid": "harepet" } ],
+            "dependsOn": [ { "modid": "petai" } ],
             "code": "useinventory",
             "animation": "Dig",
             "animationSpeed": 0.75,
@@ -445,191 +470,15 @@
             "maxcooldownHours": 1.5
           },
           {
-            "dependsOn": [ { "modid": "harepet" } ],
+            "dependsOn": [ { "modid": "petai" } ],
             "code": "stayclosetoentity",
             "priority": 1.4,
-            "entityCode": "tamehare-female-jackalope-adult",
+            "entityCode": "tamehare-jackalope-adult-female",
             "movespeed": 0.02,
             "animationSpeed": 3,
             "maxDistance": 5,
             "searchRange": 25,
             "animation": "Run"
-          }
-        ]
-      },
-      {
-        "dependsOn": [ { "modid": "harepet" } ],
-        "code": "tameable",
-        "size": "small",
-        "tameEntityCode": "hazjackalope:tamehare-baby-jackalope", //unsure if the varient code will matter, including it here, but otherwise might need to change tame jackalope code
-        "treat": [
-          {
-            "code": "drygrass",
-            "progress": 0.05,
-            "cooldown": 0.2
-          },
-          {
-            "code": "grain-spelt",
-            "progress": 0.1,
-            "cooldown": 0.5
-          },
-          {
-            "code": "grain-rye",
-            "progress": 0.1,
-            "cooldown": 0.5
-          },
-          {
-            "code": "grain-flax",
-            "progress": 0.1,
-            "cooldown": 0.5
-          },
-          {
-            "code": "grain-rice",
-            "progress": 0.1,
-            "cooldown": 0.5
-          },
-          {
-            "code": "grain-amaranth",
-            "progress": 0.1,
-            "cooldown": 0.5
-          },
-          {
-            "code": "grain-sunflower",
-            "progress": 0.1,
-            "cooldown": 0.5
-          },
-          {
-            "code": "vegetable-carrot",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-cabbage",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-onion",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-turnip",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-parsnip",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-cookedcattailroot",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-pumpkin",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-cassava",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-cookedpapyrusroot",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-bellpepper",
-            "progress": 0.2,
-            "cooldown": 1
-          },
-          {
-            "code": "vegetable-olive",
-            "progress": 0.2,
-            "cooldown": 1
-          }
-        ]
-      },
-      {
-        "dependsOn": [ { "modid": "harepet" } ],
-        "code": "mouthinventory",
-        "acceptStacks": [
-          {
-            "type": "item",
-            "code": "drygrass"
-          },
-          {
-            "type": "item",
-            "code": "grain-spelt"
-          },
-          {
-            "type": "item",
-            "code": "grain-rye"
-          },
-          {
-            "type": "item",
-            "code": "grain-flax"
-          },
-          {
-            "type": "item",
-            "code": "grain-rice"
-          },
-          {
-            "type": "item",
-            "code": "grain-amaranth"
-          },
-          {
-            "type": "item",
-            "code": "grain-sunflower"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-carrot"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-cabbage"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-onion"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-turnip"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-parsnip"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-cookedcattailroot"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-pumpkin"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-cassava"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-cookedpapyrusroot"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-bellpepper"
-          },
-          {
-            "type": "item",
-            "code": "vegetable-olive"
           }
         ]
       }

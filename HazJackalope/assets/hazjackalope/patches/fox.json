@@ -3,7 +3,7 @@
     "dependsOn": [ { "modid": "petai" } ],
     "op": "addeach",
     "path": "/server/behaviors/12/aitasks/4/entityCodes/-",
-    "value": [ "hare-male-jackalope-adult", "hare-female-jackalope-adult", "hare-baby-jackalope" ],
+    "value": [ "hare-jackalope-adult-male", "hare-jackalope-adult-female", "hare-jackalope-baby-male", "hare-jackalope-baby-female" ],
     "file": "game:entities/land/fox.json"
   }
 ]

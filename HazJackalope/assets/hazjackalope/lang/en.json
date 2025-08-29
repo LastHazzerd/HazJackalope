@@ -1,8 +1,20 @@
 {
-  "game:item-creature-hare-jackalope-adult-male": "Jackalope (male)",
-  "game:item-creature-hare-jackalope-adult-female": "Jackalope (female)",
-  "game:item-creature-hare-jackalope-baby-male": "Jackalope baby (male)",
-  "game:item-creature-hare-jackalope-baby-female": "Jackalope baby (female)",
+  "hazjackalope:item-creature-hare-jackalope-adult-male": "Jackalope (male)",
+  "hazjackalope:item-creature-hare-jackalope-adult-female": "Jackalope (female)",
+  "hazjackalope:item-creature-hare-jackalope-baby-male": "Jackalope leveret (male)",
+  "hazjackalope:item-creature-hare-jackalope-baby-female": "Jackalope leveret (female)",
+  "hazjackalope:item-dead-creature-hare-jackalope-*": "Dead jackalope",
+  "hazjackalope:creaturegroup-hare-jackalope-adult": "Adult jackalope",
+  "hazjackalope:creaturegroup-hare-jackalope-baby": "Jackalope leveret",
+  "hazjackalope:item-antler-jackalopemale-01": "Antlers (Male Jackalope)",
+  "hazjackalope:item-antler-jackalopefemale-01": "Antlers (Female Jackalope)",
+  "hazjackalope:item-antler-jackalopemale-02": "Antlers (Male Jackalope)",
+  "hazjackalope:item-antler-jackalopefemale-02": "Antlers (Female Jackalope)",
+  "hazjackalope:item-antler-jackalopemale-03": "Antlers (Male Jackalope)",
+  "hazjackalope:item-antler-jackalopefemale-03": "Antlers (Female Jackalope)",
+  "hazjackalope:item-antler-jackalopemale-04": "Antlers (Male Jackalope)",
+  "hazjackalope:item-antler-jackalopefemale-04": "Antlers (Female Jackalope)",
+
   "game:item-dead-creature-hare-jackalope-*": "Dead jackalope",
   "game:creaturegroup-hare-jackalope-adult": "Adult jackalope",
   "game:creaturegroup-hare-jackalope-baby": "Jackalope leveret",
@@ -14,9 +26,7 @@
   "game:item-antler-jackalopefemale-03": "Antlers (Female Jackalope)",
   "game:item-antler-jackalopemale-04": "Antlers (Male Jackalope)",
   "game:item-antler-jackalopefemale-04": "Antlers (Female Jackalope)",
-  //1.20 names
-  "item-creature-hare-male-jackalope-adult": "Jackalope (male)",
-  "item-creature-hare-female-jackalope-adult": "Jackalope (female)",
-  "item-creature-hare-baby-jackalope": "Jackalope (baby)",
-  "item-dead-creature-hare-jackalope": "Jackalope (dead)"
+
+  "hazjackalope:item-dead-creature-hare-jackalope-adult-*": "Jackalope (male)",
+  "hazjackalope:item-dead-creature-hare-jackalope-baby-*": "Jackalope leveret (male)"
 }
