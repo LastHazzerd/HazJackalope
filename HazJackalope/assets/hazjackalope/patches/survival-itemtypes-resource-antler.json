@@ -276,6 +276,14 @@
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
+  //ground transform, need to remove wildcard
+  {
+    "op": "move",
+    "frompath": "/groundTransformByType/*",
+    "path": "/temp",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server" //see if this can remove the client debug warning
+  },
   {
     "op": "addmerge",
     "path": "/groundTransformByType/antler-jackalopefemale-*",
@@ -323,5 +331,12 @@
     },
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
+  },
+  {
+    "op": "move",
+    "frompath": "/temp",
+    "path": "/groundTransformByType/*",
+    "file": "game:itemtypes/resource/antler.json",
+    "side": "Server" //see if this can remove the client debug warning
   }
 ]
