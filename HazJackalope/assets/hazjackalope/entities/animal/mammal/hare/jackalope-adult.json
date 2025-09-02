@@ -413,8 +413,8 @@
           "var": 3
         },
         "insideBlockCodes": [
-          "tallgrass-*",
-          "snowlayer-1"
+          "game:tallgrass-*",
+          "game:snowlayer-1"
         ],
         "companions": [
           "hazjackalope:hare-jackalope-adult-female",
@@ -435,8 +435,8 @@
           "var": 3
         },
         "insideBlockCodes": [
-          "tallgrass-*",
-          "snowlayer-1"
+          "game:tallgrass-*",
+          "game:snowlayer-1"
         ],
         "companions": [
           "hazjackalope:hare-jackalope-adult-female",
