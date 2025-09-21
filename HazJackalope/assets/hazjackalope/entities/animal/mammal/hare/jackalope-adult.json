@@ -4,9 +4,18 @@
   "tags": [ "animal", "huntable", "adult", "habitat-land" ],
   "weight": 4,
   "variantgroups": [
-    {"code": "type", "states": [ "jackalope" ] },
-    {"code": "age", "states": [ "adult" ] },
-    {"code": "gender", "states": [ "male", "female" ] }
+    {
+      "code": "type",
+      "states": [ "jackalope" ]
+    },
+    {
+      "code": "age",
+      "states": [ "adult" ]
+    },
+    {
+      "code": "gender",
+      "states": [ "male", "female" ]
+    }
   ],
   "hitboxSize": {
     "x": 0.75,
@@ -382,7 +391,7 @@
         "code": "antlergrowth",
         "enabled": true,
         "overrideTypeByType": {
-          "*-male":  "jackalopemale",
+          "*-male": "jackalopemale",
           "*-female": "jackalopefemale"
         },
         "variants": [ "01", "02", "03", "04" ],
@@ -400,57 +409,47 @@
       },
       { "code": "entitystatetags" }
     ],
-    "spawnconditions": {
-      "worldgen": {
-        "TriesPerChunk": {
-          "avg": 0.1, //default hare is ave 0.14
-          "var": 0
+    "spawnconditionsByType": {
+      "*-jackalope-adult-male": {
+        "worldgen": {
+          "TriesPerChunk": {
+            "avg": 0.06,
+            "var": 0
+          },
+          "tryOnlySurface": true,
+          "herdSize": {
+            "dist": "uniform",
+            "avg": 1,
+            "var": 3
+          },
+          "insideBlockCodes": [ "tallgrass-*", "snowlayer-1" ],
+          "companions": [ "hare-{type}-adult-female", "hare-{type}-baby-male", "hare-{type}-baby-female" ]
         },
-        "tryOnlySurface": true,
-        "groupSize": {
-          "dist": "uniform",
-          "avg": 1,
-          "var": 3
+        "runtime": {
+          "group": "neutral",
+          "chance": 0.001,
+          "tryOnlySurface": true,
+          "__comment": "Make them spawn in dark places so they don't spawn inside farmland",
+          "maxLightLevel": 8,
+          "maxQuantity": 3,
+          "lightLevelType": "maxTimeOfDayLight",
+          "herdSize": {
+            "dist": "verynarrowgaussian",
+            "avg": 1,
+            "var": 3
+          },
+          "insideBlockCodes": [ "tallgrass-*", "snowlayer-1" ],
+          "companions": [ "hare-{type}-adult-female", "hare-{type}-baby-male", "hare-{type}-baby-female" ]
         },
-        "insideBlockCodes": [
-          "game:tallgrass-*",
-          "game:snowlayer-1"
-        ],
-        "companions": [
-          "hazjackalope:hare-jackalope-adult-female",
-          "hazjackalope:hare-jackalope-baby"
-        ]
-      },
-      "runtime": {
-        "group": "neutral",
-        "tryOnlySurface": true,
-        "chance": 0.005, //default hare is chance 0.007
-        "maxQuantity": 3,
-        "__comment": "Make them spawn away from artifical light so they don't spawn inside farmland",
-        "maxLightLevel": 6,
-        "lightLevelType": "onlyBlockLight",
-        "groupSize": {
-          "dist": "uniform",
-          "avg": 1,
-          "var": 3
-        },
-        "insideBlockCodes": [
-          "game:tallgrass-*",
-          "game:snowlayer-1"
-        ],
-        "companions": [
-          "hazjackalope:hare-jackalope-adult-female",
-          "hazjackalope:hare-jackalope-baby"
-        ]
-      },
-      "climate": { //wider range than most hares to ensure they have a chance of being seen in a few climates.
-        "minTemp": -15,
-        "maxTemp": 25,
-        "minRain": 0.25,
-        "maxRain": 0.9,
-        "minForestOrShrubs": 0.3,
-        "maxForest": 0.9,
-        "maxShrubs": 0.9
+        "climate": {
+          "minTemp": -30,
+          "maxTemp": 30,
+          "minRain": 0.2,
+          "maxRain": 0.9,
+          "minForestOrShrubs": 0.25,
+          "maxForest": 0.75,
+          "maxShrubs": 0.75
+        }
       }
     }
   },
