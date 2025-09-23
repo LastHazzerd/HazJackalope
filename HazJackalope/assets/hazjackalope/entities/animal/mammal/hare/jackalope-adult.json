@@ -422,7 +422,7 @@
             "avg": 1,
             "var": 3
           },
-          "insideBlockCodes": [ "tallgrass-*", "snowlayer-1" ],
+          "insideBlockCodes": [ "game:tallgrass-*", "game:snowlayer-1" ],
           "companions": [ "hare-{type}-adult-female", "hare-{type}-baby-male", "hare-{type}-baby-female" ]
         },
         "runtime": {
@@ -438,7 +438,7 @@
             "avg": 1,
             "var": 3
           },
-          "insideBlockCodes": [ "tallgrass-*", "snowlayer-1" ],
+          "insideBlockCodes": [ "game:tallgrass-*", "game:snowlayer-1" ],
           "companions": [ "hare-{type}-adult-female", "hare-{type}-baby-male", "hare-{type}-baby-female" ]
         },
         "climate": {
