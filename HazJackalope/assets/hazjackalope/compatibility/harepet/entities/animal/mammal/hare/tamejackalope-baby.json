@@ -233,7 +233,7 @@
       { "code": "breathe" },
       {
         "code": "raisable",
-        "hoursToGrow": 336,
+        "hoursToGrow": 168,
         "adultEntityCodes": "hazjackalope:tamehare-{type}-baby-{gender}"
       },
       {
