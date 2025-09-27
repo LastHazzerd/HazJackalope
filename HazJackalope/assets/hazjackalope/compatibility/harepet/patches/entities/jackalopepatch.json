@@ -9,7 +9,7 @@
       {
         "code": "tameable",
         "size": "small",
-        "tameEntityCode": "hazjackalope:hare-{type}-baby-{gender}",
+        "tameEntityCode": "hazjackalope:tamehare-{type}-baby-{gender}",
         "treat": [
           { "code": "drygrass", "progress": 0.05, "cooldown": 0.2 },
           { "code": "grain-spelt", "progress": 0.1, "cooldown": 0.5 },
