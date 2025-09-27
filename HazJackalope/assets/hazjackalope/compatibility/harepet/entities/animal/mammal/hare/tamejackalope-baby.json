@@ -234,7 +234,7 @@
       {
         "code": "raisable",
         "hoursToGrow": 336,
-        "adultEntityCodes": "hazjackalope:tamehare-{gender}-jackalope-adult"
+        "adultEntityCodes": "hazjackalope:tamehare-{type}-baby-{gender}"
       },
       {
         "code": "taskai",
