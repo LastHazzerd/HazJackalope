@@ -1,4 +1,5 @@
 {
+  //base mod
   "hazjackalope:item-creature-hare-jackalope-adult-male": "Jackalope (male)",
   "hazjackalope:item-creature-hare-jackalope-adult-female": "Jackalope (female)",
   "hazjackalope:item-creature-hare-jackalope-baby-male": "Jackalope leveret (male)",
@@ -28,5 +29,12 @@
   "game:item-antler-jackalopefemale-04": "Antlers (Female Jackalope)",
 
   "hazjackalope:item-dead-creature-hare-jackalope-adult-*": "Jackalope (male)",
-  "hazjackalope:item-dead-creature-hare-jackalope-baby-*": "Jackalope leveret (male)"
+  "hazjackalope:item-dead-creature-hare-jackalope-baby-*": "Jackalope leveret (male)",
+
+  //pethare dependant
+  "hazjackalope:item-creature-tamehare-jackalope-adult-male": "Jackalope (male, tame)",
+  "hazjackalope:item-creature-tamehare-jackalope-adult-female": "Jackalope (female, tame)",
+  "hazjackalope:item-creature-tamehare-jackalope-baby-male": "Jackalope leveret (male, tame)",
+  "hazjackalope:item-creature-tamehare-jackalope-baby-female": "Jackalope leveret (female, tame)",
+  "hazjackalope:item-dead-creature-tamehare-jackalope-*": "Dead jackalope (tame)"
 }

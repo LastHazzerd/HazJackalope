@@ -1,9 +1,0 @@
-[
-  {// adds a petai function for foxes
-    "dependsOn": [ { "modid": "petai" } ],
-    "op": "addeach",
-    "path": "/server/behaviors/12/aitasks/4/entityCodes/-",
-    "value": [ "hare-jackalope-adult-male", "hare-jackalope-adult-female", "hare-jackalope-baby-male", "hare-jackalope-baby-female" ],
-    "file": "game:entities/land/fox.json"
-  }
-]

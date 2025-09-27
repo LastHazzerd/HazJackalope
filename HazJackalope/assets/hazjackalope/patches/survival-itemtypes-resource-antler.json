@@ -2,14 +2,14 @@
   //adding the variants for jackalopes
   {
     "op": "addmerge",
-    "path": "/variantgroups/0/states/24",
+    "path": "/variantgroups/0/states/-",
     "value": "jackalopemale",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/variantgroups/0/states/25",
+    "path": "/variantgroups/0/states/-",
     "value": "jackalopefemale",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
@@ -17,70 +17,70 @@
   //skipping the varient antler stages that don't exist for the jackalopes
   {
     "op": "addmerge",
-    "path": "/skipVariants/63",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopemale-05",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/64",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopemale-06",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/65",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopemale-07",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/66",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopemale-08",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/67",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopemale-09",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/68",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopefemale-05",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/69",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopefemale-06",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/70",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopefemale-07",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/71",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopefemale-08",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"
   },
   {
     "op": "addmerge",
-    "path": "/skipVariants/72",
+    "path": "/skipVariants/-",
     "value": "game:antler-jackalopefemale-09",
     "file": "game:itemtypes/resource/antler.json",
     "side": "Server"

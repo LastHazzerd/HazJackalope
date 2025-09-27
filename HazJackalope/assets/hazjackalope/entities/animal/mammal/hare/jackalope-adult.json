@@ -208,10 +208,10 @@
       {
         "code": "multiply",
         "spawnEntityCodes": [
-          { "code": "hare-{type}-baby-male" },
-          { "code": "hare-{type}-baby-female" }
+          { "code": "hazjackalope:hare-{type}-baby-male" },
+          { "code": "hazjackalope:hare-{type}-baby-female" }
         ],
-        "requiresNearbyEntityCode": "hare-{type}-adult-male",
+        "requiresNearbyEntityCode": "hazjackalope:hare-{type}-adult-male",
         "requiresNearbyEntityRange": 10,
         "spawnQuantityMin": 1,
         "spawnQuantityMax": 4,
